@@ -1,0 +1,25 @@
+@import '../../css/*.styl'
+
+.b-look__row
+    padding 50px
+    background #dedede
+    
+    .b-look
+        float left
+        
+    &::after
+        content ''
+        display table
+        clear both
+
+.b-look
+    @extend $b-look
+    width 32%
+    margin 0 1%
+    
+    &:first-of-type
+        margin 0 1% 0 0
+        
+    &:last-of-type
+        margin 0 0 0 1%
+    
