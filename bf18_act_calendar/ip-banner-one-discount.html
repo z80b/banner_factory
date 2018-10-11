@@ -1,0 +1,548 @@
+
+            
+            <style>
+                .ibanner43755845.ibanner-wrapper {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .ibanner43755845 .ibanner-small-ip {
+                    display: table;
+                    width: 100%;
+                    height: 130px;
+                    overflow: hidden;
+                    position: relative;
+                    background: #ef5c6e;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                .ibanner43755845 .ibanner-small-ip:hover .ibanner__promocode-hint {
+                    transition: bottom .15s ease, top .15s ease, opacity .3s ease-in;
+                    opacity: 1;
+                    bottom: 55px;
+                }
+
+                .ibanner43755845 .ibanner-small-ip:hover .ibanner__promocode-hover-wrapper {
+                    width: 100%;
+                }
+
+                .ibanner43755845 .ibanner-small-ip:hover .ibanner__promocode {
+                    color: #fff;
+                }
+
+                .ibanner43755845 .ibanner-small-ip:hover .ibanner__promocode[data-promo-style="black"] {
+                    color: #000;
+                }
+
+                .ibanner43755845 .ibanner-small-ip__text {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: #fff;
+                    font: 16px/20px "ProximaNova Light", "Helvetica Neue", "Arial";
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 260px 0 20px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                .ibanner43755845 h3 {
+                    display: block;
+                    font: 24px/30px "ProximaNova Light", "Helvetica Neue", "Arial";
+                    text-transform: uppercase;
+                    color: #fff;
+                    letter-spacing: 2px;
+                    margin: 0 0 10px;
+                }
+
+                
+                .ibanner43755845 .ibanner-small-ip-hinter {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background: #ef5c6e;
+                    font: 13px/16px "ProximaNova Light", "Helvetica Neue", "Arial";
+                    color: #fff;
+                    padding: 20px 0 20px 20px;
+                    opacity: 0;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                    box-sizing: border-box;
+                    -webkit-transition: opacity .2s ease;
+                    -moz-transition: opacity .2s ease;
+                    -o-transition: opacity .2s ease;
+                    transition: opacity .2s ease;
+                }
+
+                .ibanner43755845 .ibanner-small-ip-hinter-inner {
+                    width: 70%;
+                    overflow: auto;
+                    height: 100%;
+                    padding: 0 12px 0 0;
+                }
+
+                .ibanner43755845 .ibanner-small-ip-hinter-inner::-webkit-scrollbar {
+                    width: 5px;
+                }
+
+                .ibanner43755845 .ibanner-small-ip-hinter-inner::-webkit-scrollbar-track {
+                    background: #f1f1f1; 
+                }
+                 
+                .ibanner43755845 .ibanner-small-ip-hinter-inner::-webkit-scrollbar-thumb {
+                    background: #888; 
+                }
+
+                .ibanner43755845 .ibanner-small-ip-hinter-inner::-webkit-scrollbar-thumb:hover {
+                    background: #555; 
+                }
+
+                .ibanner43755845 .ibanner-small-ip__show-hinter,
+                .ibanner43755845 .ibanner-small-ip__close-hinter {
+                    font: 12px/13px "ProximaNova Light", "Helvetica Neue", "Arial";
+                    color: #fff;
+                    border-bottom: 1px solid #fff;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 25px;
+                    z-index: 2;
+                    display: block;
+                    cursor: pointer;
+                }
+
+                .ibanner43755845 .ibanner-radio-seeconditions,
+                .ibanner43755845 .ibanner-radio-closeconditions,
+                .ibanner43755845 .ibanner-small-ip__close-hinter {
+                    display: none;
+                }
+
+                .ibanner43755845 .ibanner-radio-seeconditions:checked + .ibanner-radio-closeconditions + .ibanner-small-ip-hinter {
+                    opacity: 1;
+                }
+
+                .ibanner43755845 .ibanner-radio-seeconditions:checked + .ibanner-radio-closeconditions + .ibanner-small-ip-hinter + label .ibanner-small-ip__show-hinter {
+                    display: none;
+                }
+
+                .ibanner43755845 .ibanner-radio-seeconditions:checked + .ibanner-radio-closeconditions + .ibanner-small-ip-hinter + label + label .ibanner-small-ip__close-hinter {
+                    display: block;
+                }
+
+                .ibanner43755845 .ibanner-radio-closeconditions:checked + .ibanner-small-ip-hinter {
+                    opacity: 0;
+                }
+
+                .ibanner43755845 .ibanner-radio-closeconditions:checked + .ibanner-small-ip-hinter + label .ibanner-small-ip__show-hinter {
+                    display: block;
+                }
+
+                .ibanner43755845 .ibanner-radio-closeconditions:checked + .ibanner-small-ip-hinter + label + label .ibanner-small-ip__close-hinter {
+                    display: none;
+                }
+
+                
+
+                .ibanner43755845 .ibanner-menu {
+                    display: table;
+                    width: 100%;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 0;
+                }
+
+                .ibanner43755845 .ibanner-menu__item {
+                    display: table-cell;
+                    min-width: 100px;
+                    border-left: 1px solid #fff;
+                    position: relative;
+                }
+
+                .ibanner43755845 .ibanner-menu__item:first-child {
+                    border-left: 0;
+                }
+
+                .ibanner43755845 .ibanner-menu__link {
+                    display: block;
+                    height: 40px;
+                    padding: 0;
+                    font: 16px/40px "ProximaNova Light", "Helvetica Neue", "Arial";
+                    color: #333;
+                    text-align: center;
+                    background: #f1f1f1;
+                    position: relative;
+
+                    -webkit-transition: background .1s linear, border-color .1s linear;
+                    -moz-transition: background .1s linear, border-color .1s linear;
+                    -o-transition: background .1s linear, border-color .1s linear;
+                    transition: background .1s linear, border-color .1s linear;
+                }
+
+                .ibanner43755845 .ibanner-menu__link:hover {
+                    background: #888;
+                    color: #fff;
+                }
+
+                .ibanner43755845 .ibanner__promocode {
+                    position: absolute;
+                    z-index: 2;
+                    width: 195px;
+                    color: #333;
+                    background-color: #fff;
+                    cursor: pointer;
+                    height: 40px;
+                    font-size: 15px;
+                    line-height: 41px;
+                    right: 25px;
+                    top: 50%;
+                    margin-top: -20px;
+                }
+
+                .ibanner43755845 .ibanner__promocode[data-promo-style="black"] {
+                    color: #fff;
+                    background-color: #333;
+                }
+
+                .ibanner43755845 .ibanner__promocode .ibanner__promocode-hover-wrapper {
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      left: 0;
+                      width: 0;
+                      background-color: #000;
+                      transition: width .3s ease 0s;
+                }
+
+                .ibanner43755845 .ibanner__promocode[data-promo-style="black"] .ibanner__promocode-hover-wrapper {
+                      background-color: #fff;
+                }
+
+                .ibanner43755845 .ibanner__promocode-inner {
+                    position: relative;
+                }
+
+                .ibanner43755845 .ibanner__promocode-inner-wrap {
+                    z-index: 5;
+                    position: relative;
+                    text-align: center;
+                }
+
+                .ibanner43755845 .ibanner__promocode b {
+                    font-weight: bold;
+                }
+
+                .ibanner43755845 .ibanner__promocode-hint {
+                    position: absolute;
+                    width: 195px;
+                    color: #333;
+                    background-color: #fff;
+                    left: 0;
+                    bottom: 0;
+                    opacity: 0;
+                    height: 25px;
+                    font-size: 11px;
+                    line-height: 25px;
+                    text-align: center;
+                }
+
+                .ibanner43755845 .ibanner__promocode-hint:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -10px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                }
+
+                .ibanner43755845 .ibanner__promocode-hint[data-hint-position="hint-top"]:before {
+                    bottom: -10px;
+                    border-width: 10px 10px 0 10px;
+                    border-color: #fff transparent transparent transparent;
+                }
+                .ibanner43755845 .ibanner__promocode-hint[data-hint-position="hint-bottom"]:before {
+                    top: -10px;
+                    border-width: 0 10px 10px 10px;
+                    border-color: transparent transparent #fff transparent;
+                }
+                .ibanner43755845 .ibanner__promocode-inner:hover .ibanner__promocode-hint,
+                .ibanner43755845 .zeroclipboard-is-hover .ibanner__promocode-hint {
+                    transition: bottom .15s ease, top .15s ease, opacity .3s ease-in;
+                    opacity: 1;
+                }
+                .ibanner43755845 .ibanner__promocode-inner:hover .ibanner__promocode-hint[data-hint-position="hint-top"],
+                .ibanner43755845 .zeroclipboard-is-hover .ibanner__promocode-hint[data-hint-position="hint-top"] {
+                    bottom: 55px;
+                }
+                .ibanner43755845 .ibanner__promocode-inner:hover .ibanner__promocode-hint[data-hint-position="hint-bottom"],
+                .ibanner43755845 .zeroclipboard-is-hover .ibanner__promocode-hint[data-hint-position="hint-bottom"] {
+                    top: 60px;
+                }
+
+                .ibanner43755845 .ibanner-promo-applied .ibanner__promocode-hint {
+                    left: 50%;
+                    margin-left: -115px;
+                    width: 230px;
+                }
+
+                .ibanner43755845 .ibanner-promo-applied_show .ibanner__promocode-hint {
+                    transition: bottom .15s ease, top .15s ease, opacity .3s ease-in;
+                    bottom: 55px;
+                    opacity: 1;
+                }
+
+                .ibanner43755845 .ibanner-promo-applied_show .ibanner__promocode-hover-wrapper {
+                    width: 100%;
+                }
+
+                .ibanner43755845 .ibanner-promo-applied_show .ibanner__promocode-inner-wrap {
+                    color: #fff;
+                }
+                
+
+
+                
+                /* Countdown timer */
+                .ibanner43755845 .countdown {
+                    width: auto;
+                    font-family: "ProximaNova Light", Helvetica, Arial, sans-serif;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #ffffff;
+                    letter-spacing: .015em;
+                }
+                .ibanner43755845 .countdown-values {
+                  display: inline-block;
+                }
+                .ibanner43755845 .countdown .countdown__title {
+                    display: inline-block;
+                    height: 22px;
+                    line-height: 22px;
+                    margin-right: 0;
+                }
+                .ibanner43755845 .countdown .countdown__title + div {
+                    display: inline-block;
+                }
+                .ibanner43755845 .countdown__value {
+                    display: inline-block;
+                    line-height: 40px;
+                    margin-left: 5px;
+                    font-family: "ProximaNova Semibold", Helvetica, Arial, sans-serif;
+                    text-align: left;
+                    white-space: nowrap;
+                }
+                .ibanner43755845 .countdown__value:before {
+                    height: 8px;
+                    margin-right: 9px;
+                }
+                .ibanner43755845 .countdown__value:after {
+                    padding-left: 5px;
+                }
+                .ibanner43755845 .countdown__value:after {
+                    padding-left: 1px;
+                    font-family: "ProximaNova Light", Helvetica, Arial, sans-serif;
+                }
+                .ibanner43755845 .countdown__value_days:after {
+                    content: 'д'
+                }
+                .ibanner43755845 .countdown__value_hours:after {
+                    content: 'ч'
+                }
+                .ibanner43755845 .countdown__value_minutes:after {
+                    content: 'м'
+                }
+                .ibanner43755845 .countdown__value_seconds:after {
+                    content: 'с'
+                }
+                .ibanner43755845 .countdown__value_seconds {
+                    display: inline-block;
+                    width: 41px;
+                }
+                .ibanner43755845 .countdown__value_hidden {
+                    display: none;
+                }
+                .ibanner43755845 .countdown__value:before {
+                    content: '';
+                    display: inline-block;
+                    height: 15px;
+                    border-left: 1px solid #ffffff;
+                    margin-right: 20px;
+                }
+                .ibanner43755845 .countdown__value:before {
+                  display: none;
+                }
+                
+
+            </style>
+            
+            <div class="ibanner43755845 ibanner-wrapper">
+                <div class="ibanner-small-ip js-ibanner-promo-button">
+                    <div class="ibanner-small-ip__text">
+                        <h3 class="promo-code-container"><b>Дополнительно 30%</b> на зимние модели</h3>
+                        
+                            
+                                <span>Дополнительно 30% на зимние модели</span>
+                            
+                        
+
+
+                        
+                        <div class="countdown" data-time-end="2018-10-10T23:59:00" data-server-time="<!--# config timefmt='%Y/%m/%d %H:%M:%S' --><!--# echo var='date_local' -->">
+                            <div class="countdown__title">До старта:</div>
+                            <div>
+                                <div class="countdown__value countdown__value_days">undefined</div>
+                                <div class="countdown__value countdown__value_hours">undefined</div>
+                                <div class="countdown__value countdown__value_minutes">undefined</div>
+                                <div class="countdown__value countdown__value_seconds">undefined</div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            (function(){
+                                var countdown   = document.querySelector('.countdown'),
+                                    daysEl      = document.querySelector('.countdown__value_days'),
+                                    hoursEl     = document.querySelector('.countdown__value_hours'),
+                                    minEl       = document.querySelector('.countdown__value_minutes'),
+                                    secEl       = document.querySelector('.countdown__value_seconds'),
+                                    hiddenClass = 'countdown__value_hidden',
+                                    timeEnd     = countdown.dataset.timeEnd,
+                                    serverTime  = countdown.dataset.serverTime;
+
+                                timeEnd = timeEnd.replace(/-/g,'/');
+                                timeEnd = timeEnd.replace(/t/i, ' ');
+
+                                serverTime = serverTime.split(' ');
+                                serverTime[1] = serverTime[1].split(':');
+                                serverTime[1][0] = parseInt(serverTime[1][0]) + 3; //3 - количество часов для Московского времени.
+                                serverTime[1] = serverTime[1].join(':');
+                                serverTime = serverTime.join(' ');
+
+                                var serverTimeCounter = Date.parse(new Date(serverTime));
+
+                                setTime(getTimeRemaining(timeEnd, serverTimeCounter), daysEl, hoursEl, minEl, secEl);
+
+                                var timeInterval = setTimeout(function t() {
+                                    serverTimeCounter = serverTimeCounter + 1000;
+
+                                    var time = getTimeRemaining(timeEnd, serverTimeCounter);
+
+                                    setTime(time, daysEl, hoursEl, minEl, secEl);
+
+                                    if (time.total <= 0) {
+                                        clearTimeout(timeInterval);
+
+                                        return;
+                                    }
+
+                                    timeInterval = setTimeout(t, 1000);
+
+                                }, 1000);
+
+                                function setTime(time, daysEl, hoursEl, minEl, secEl) {
+                                    manageVisibleBlocks(time, daysEl, secEl);
+
+                                    daysEl.innerText  = (time.total <= 0) ? 0 : time.days;
+                                    hoursEl.innerText = (time.total <= 0) ? 0 : time.hours;
+                                    minEl.innerText   = (time.total <= 0) ? 0 : time.minutes;
+                                    secEl.innerText   = (time.total <= 0) ? 0 : ('0' + time.seconds).slice(-2);
+                                }
+
+                                function manageVisibleBlocks(time, daysEl, secEl) {
+                                    if (time.days == 0) {
+                                        secEl.classList.remove(hiddenClass);
+                                        daysEl.classList.add(hiddenClass);
+                                    } else {
+                                        secEl.classList.add(hiddenClass);
+                                    }
+                                }
+
+                                function getTimeRemaining(endTime, serverTimeCounter) {
+                                    var t       = Date.parse(endTime) - serverTimeCounter,
+                                        seconds = Math.floor( (t/1000) % 60 ),
+                                        minutes = Math.floor( (t/1000/60) % 60 ),
+                                        hours   = Math.floor( (t/(1000*60*60)) % 24 ),
+                                        days    = Math.floor( t/(1000*60*60*24) );
+                                        
+                                    return {
+                                        'total'  : t,
+                                        'days'   : days,
+                                        'hours'  : hours,
+                                        'minutes': minutes,
+                                        'seconds': seconds
+                                    };
+                                }
+                            })();                    
+                        </script>
+                    </div>
+                    
+                    
+                    <div class="promo-code-container">
+                        <div class="ibanner__promocode js-ibanner-copy-code" data-promo-style="white">
+                            <div class="ibanner__promocode-inner js-ibanner-promo-button">
+                                <div class="ibanner__promocode-hover-wrapper"></div>
+                                <div class="ibanner__promocode-inner-wrap">Промокод: 
+                                    
+                                    <b class="js-promo-code">code</b>
+                                    
+                                </div>
+                                <div class="ibanner__promocode-hint js-hint" data-hint-position="hint-top">Кликните, чтобы применить</div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        (function() {
+                            var promo = document.querySelector('.js-ibanner-promo-button'),
+                                hint = document.querySelector('.js-hint');
+
+                            if (window.location.search.match(/promocode/)) {
+                                hint.innerHTML = 'Промокод уже применен в корзине';
+                                promo.className += ' ibanner-promo-applied ibanner-promo-applied_show';
+
+                                setTimeout(function() {
+                                    promo.className = promo.className.replace(' ibanner-promo-applied_show', '');
+                                }, 5000);
+                            }
+                        })();
+                    </script>
+                    
+
+                    
+                        <input class="ibanner-radio-seeconditions" type="radio" id="ibanner-show-text" name="ibanner-hinter"/>
+                        <input class="ibanner-radio-closeconditions" type="radio" id="ibanner-close-text" name="ibanner-hinter"/>
+                        <div class="ibanner-small-ip-hinter">
+                            
+                            <div class="ibanner-small-ip-hinter-inner">При любой сумме заказа. Скидка распространяется на товары, представленные на данной странице. Ассортимент товаров, участвующих в акции, может измениться. Дополнительная скидка по программе лояльности Lamoda Friends&Family не применяется совместно с промокодом данной акции. По 10 ноября 2016 года включительно.</div>
+                            
+                        </div>
+                        <label for="ibanner-show-text">
+                            <span class="ibanner-small-ip__show-hinter">Смотреть условия</span>
+                        </label>
+                        <label for="ibanner-close-text">
+                            <span class="ibanner-small-ip__close-hinter">Скрыть условия</span>
+                        </label>
+                    
+
+                    
+
+                </div>
+
+                <div class="ibanner-wrapper-menu">
+                    <ul class="ibanner-menu">
+                        <li class="ibanner-menu__item" key=0>
+                                        <a class="ibanner-menu__link" href=/c/15/shoes-women/?labels=>Обувь</a>
+                                    </li>,<li class="ibanner-menu__item" key=1>
+                                        <a class="ibanner-menu__link" href=/c/355/clothes-zhenskaya-odezhda/?labels=>Одежда</a>
+                                    </li>,<li class="ibanner-menu__item" key=2>
+                                        <a class="ibanner-menu__link" href=/c/557/accs-zhenskieaksessuary/?labels=>Аксессуары</a>
+                                    </li>
+                    </ul>
+                </div>
+            </div>
