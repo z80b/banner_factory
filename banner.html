@@ -1,0 +1,54 @@
+<script>
+    (function() {
+        if (!checkIfFlashEnabled()) nativeCopy();
+
+        function checkIfFlashEnabled() { 
+            var isFlashEnabled = false; 
+
+            if (typeof(navigator.plugins)!="undefined" && typeof(navigator.plugins["Shockwave Flash"])=="object") {
+                isFlashEnabled = true; 
+            } else if (typeof  window.ActiveXObject !="undefined") { 
+                try { 
+                    if (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) isFlashEnabled = true; 
+                } catch(e) {}; 
+            }
+
+            return isFlashEnabled; 
+        }
+
+        function nativeCopy() {
+            var copyButtons = document.querySelectorAll('.js-ibanner-promo-button');
+
+            for (var i=0; i<copyButtons.length; i++) {
+                if (!copyButtons[i]) return;
+
+                copyButtons[i].onclick = copy;
+            }
+
+            function copy() {
+                var tempElem = document.createElement('textarea'),
+                    code     = this.querySelector('.js-promo-code').innerHTML,
+                    hint     = this.querySelector('.js-hint');
+
+                tempElem.id = 'tempElem';
+                tempElem.style.height = 0;
+                document.body.appendChild(tempElem);
+
+                tempElem.value = code;
+
+                var selector = document.querySelector('#tempElem');
+
+                selector.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElem);
+
+                hint.innerHTML = 'Код скопирован';
+
+                this.onmouseleave = function() {
+                    hint.innerHTML = 'Кликните, чтобы скопировать';
+                }
+            }
+        }
+
+    })();
+</script>

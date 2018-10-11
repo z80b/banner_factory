@@ -1,0 +1,290 @@
+<script type="text/javascript">
+(function(cursorWidth, cursorHeight) {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var cursor = {x: width/2, y: width/2};
+    var particles = [];
+
+    function init() {
+        bindEvents();
+        loop();
+    }
+
+    function bindEvents() {
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('touchmove', onTouchMove);
+        document.addEventListener('touchstart', onTouchMove);
+        window.addEventListener('resize', onWindowResize);
+    }
+
+    function onWindowResize(e) {
+        width = window.innerWidth;
+        height = window.innerHeight;
+    }
+
+    function onTouchMove(e) {
+        if( e.touches.length > 0 ) for( var i = 0; i < e.touches.length; i++ ) {
+            addParticle( e.touches[i].clientX, e.touches[i].clientY );
+        }
+    }
+
+    function onMouseMove(e) {    
+        cursor.x = e.clientX;
+        cursor.y = e.clientY;
+        addParticle( cursor.x, cursor.y );
+    }
+
+    function addParticle(x, y) {
+        var particle = new Particle();
+        particle.init(x, y);
+        particles.push(particle);
+    }
+
+    function updateParticles() {
+        // Updated
+        for( var i = 0; i < particles.length; i++ ) {
+            particles[i].update();
+        }
+        // Remove dead particles
+        for( var i = particles.length -1; i >= 0; i-- ) {
+            if( particles[i].lifeSpan < 0 ) {
+                particles[i].die();
+                particles.splice(i, 1);
+            }
+        }
+    }
+
+    function applyProperties( target, properties ) {
+        for( var key in properties ) {
+            target.style[ key ] = properties[ key ];
+        }
+    }
+
+    function loop() {
+        requestAnimationFrame(loop);
+        updateParticles();
+    }
+
+    function Particle() {
+
+        this.lifeSpan = 120; //ms
+        this.initialStyles ={
+            "opacity": "1",
+            "position": "fixed",
+            "display": "block",
+            "border": "none",
+            "width": cursorWidth + "px",
+            "height": cursorHeight + "px",
+            "pointerEvents": "none",
+            "z-index": "10000000",
+            "will-change": "top"
+        };
+
+        this.init = function(x, y) {
+
+            this.velocity = {
+                x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 1),
+                y: 1
+            };
+          
+            this.position = {x: x - 5, y: y - 10};
+            this.initialStyles.opacity = (Math.random() * 1);
+            this.element = document.createElement("img");
+            this.element.setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAABOklEQVR4AeTVAUQDYRjG8dcGCJVAQikERQoAIBAoFAhIBCABKlVAACQgokwQBDYKAoGwIki0pAgVqErX/8E4udrd7r7vEH4f8PizHa/dtPb/NIxtVHGHGqo4wDQKEZsiZlHBNV7wigeUMQkL0xO2g6CBewyGNkN4jLG7QFdUuIwgpne0oR0fCXZP6AmH1xEktC9N7E7q4W68IfBoXOFFBJ7tKVzJIXyp8G0O4WfT85/CVwqf5xA+VLiUQ3hB4RnP0S/0Kdzh+X/ehSksWx7DI+FwLz49RDejrtOK42gNLVFhOXMYHoP9Fh5w9JMvw/4Ky1TWlwgWJyzzGUWPYUnCspoyeopCM2FZShEtwpoNy1zC6BFM0oZlNObXXoJlGZbOBid0DeYiXLcREZ2AuQ7L9wyhPYoHQCxPjhkA2dHsmC25jB4AAAAASUVORK5CYII=");
+
+            applyProperties(this.element, this.initialStyles);
+            this.update();
+            document.body.appendChild(this.element);
+        };
+        
+        this.update = function() {
+            this.position.x += this.velocity.x;
+            this.position.y += this.velocity.y;
+            this.lifeSpan--;
+            this.element.style.top = "" + this.position.y + "px";
+            this.element.style.left = "" + this.position.x + "px";
+            this.element.style.transform = "scale(" + (this.lifeSpan / 120) + ")";
+        }
+        
+        this.die = function() {
+            this.element.parentNode.removeChild(this.element);
+        }
+    }
+
+    init();
+
+})(20, 20);
+</script>
+<div class="wrapper-worm js-wrapper-worm">
+    <style>
+        .wrapper-worm {
+            font-size: 0;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .worm__track {
+            transform: translateX(0);
+            transition: .5s transform ease;
+        }
+
+        .worm {
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            cursor: default;
+            transition: .5s all ease .5s
+            
+        }
+
+        .worm_bf {
+            color: #fff;
+        }
+
+        .worm__block {
+            display: inline-block;
+            width: 100%;
+            background: #ef5c6e;
+            text-align: center;
+        }
+
+        .worm__block_bf {
+            background: #000;
+        }
+
+        .worm__text {
+            display: inline-block;
+            font: 14px/50px "ProximaNova Semibold", "Arial";
+            color: #fff;
+            margin: 0 20px 0 0;
+        }
+
+        .worm__button {
+            display: inline-block;
+            width: 149px;
+            height: 29px;
+            font: 13px/30px "ProximaNova Light", "Arial";
+            text-align: center;
+            outline: 1px solid #ffffff;
+            background: #ef5c6e;
+            color: #fff;
+            position: relative;
+            top: -1px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .worm__button:hover {
+            color: #ef5c6e;
+            background: #ffffff;
+        }
+
+        .worm_bf .worm__button {
+            background: #ffba00;
+            color: #000;
+            outline: solid 1px #ffba00;
+        }
+
+        .worm_bf .worm__button:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .hidden-button {
+            display: block;
+        }
+
+        .worm__arrow {
+            position: absolute;
+            top: 15px; left: 20px;
+            width: 24px; height: 24px;
+            margin: 0; padding: 0;
+            border: none; outline: none;
+            cursor: pointer;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAMAAAChk39BAAAARVBMVEX///8yMDne39XW1tbW1tb////e39UyMDnW1tYyMTkyMToxMDne3tUyMTkyMTpGRETe3t76+vre3t5GQ0QxMDne39Xe3tS75M4EAAAAFnRSTlMAHv//4//yH+gfHh/yHh8t7f//LR7t53t0XwAAALBJREFUeAGN08UNxFAQA1CHmaH/Ujc8EEdan588HyEJwggqURiAJIgTy5I4oCrNoJKlxG0qL2BS5C9X2i7pK53KK7xS5ZszE+sMJFmt5jZbF1Wb2/qaR6UtPtKmm+N7ZPvterJHt9++w5CMXIkbk+FfNvV8m3qz/QTMMXei4vm+gu8DkYsgjqht7uKdqGWbqK+r5V0NVIKF7CPbuvyDkz6yLtrHu6TPf5mti7jVslWpH2vRBvk8mInyAAAAAElFTkSuQmCC') 6px 50% no-repeat;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .worm__arrow_next {
+            left: auto;
+            right: 20px;
+            background-position: -20px 50%;
+        }
+        .worm__arrow:active {
+            animation: flashLight 0.5s forwards;
+            opacity: 0.6;
+        }
+
+        .wrapper-worm_next .worm__track {
+            transform: translateX(-100%);
+        }
+
+        .worm__hider {
+            opacity: 0;
+            transition: .3s opacity ease .3s;
+        }
+
+        .slick-current .worm__hider {
+            opacity: 1;
+        }
+
+        @keyframes flashLight {
+          from {
+            background-color: #ddd;
+            box-shadow: 0 0 0 0 #ddd;
+          }
+          to {
+            background-color: rgba(250,250,250,0);
+            box-shadow: 0 0 0 20px rgba(250,250,250,0);
+          }
+        }
+    </style>
+    <div class="worm__track js-worm-slider">
+        <div class="worm__block">
+            <div class="worm__hider">
+                <a class="worm worm_sale">
+                    <h3 class="worm__text">Только 24 часа: скидка 35% по промокоду на тысячи моделей</h3>
+                </a>
+                <a class="worm__button" href="{{ links[0] }}"><b>Женщинам</b></a>
+                <a class="worm__button" href="{{ links[1] }}"><b>Мужчинам</b></a>
+                <a class="worm__button" href="{{ links[2] }}"><b>Детям</b></a>
+            </div>
+        </div>
+        <div class="worm__block worm__block_bf">
+            <div class="worm__hider">
+                <a class="worm worm_bf">
+                    <h3 class="worm__text">ПОДГОТОВЬТЕСЬ К BLACK FRIDAY 24.11</h3>
+                    <span class="worm__button">Перейти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <button class="worm__arrow worm__arrow_prev js-worm__arrow_prev"></button>
+    <button class="worm__arrow worm__arrow_next js-worm__arrow_next"></button>
+    <script>
+    var waitingInterval = setInterval(slickReady, 500);
+
+    function initWormBanner() {
+        $('.js-worm-slider').slick({
+            infinite: true,
+            autoplay: true,
+            speed: 300,
+            slidesToShow: 1,
+            prevArrow: '.js-worm__arrow_prev',
+            nextArrow: '.js-worm__arrow_next'
+        });            
+    }
+
+    function slickReady() {
+        if ($ && $.fn && $.fn.slick) {
+            clearInterval(waitingInterval);
+            initWormBanner();
+        }
+    }
+    </script>
+</div>

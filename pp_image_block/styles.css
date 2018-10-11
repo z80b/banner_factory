@@ -1,0 +1,90 @@
+.b-image-block {
+  display: block;
+}
+.b-image-block::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.b-image-block__preview,
+.b-image-block__bigimage {
+  display: block;
+  width: 100%;
+}
+.b-image-block__preview {
+  padding: 2px;
+  box-sizing: border-box;
+}
+.b-image-block__slider {
+  position: relative;
+  width: 100%;
+}
+.b-image-block__slider-inner {
+  overflow: hidden;
+}
+.b-image-block__slider-button {
+  position: absolute;
+  top: 0;
+  width: 27px;
+  height: 100%;
+  background: 50% 50% no-repeat;
+  background-size: contein;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.b-image-block__slider-button--prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#333'/></svg>");
+  left: 0;
+}
+.b-image-block__slider-button--prev:hover {
+  transform: translate(-2px, 0);
+}
+.b-image-block__slider-button--next {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#333'/></svg>");
+  right: 0;
+}
+.b-image-block__slider-button--next:hover {
+  transform: translate(2px, 0);
+}
+.b-image-block__slider-button:hover {
+  opacity: 0.8;
+}
+.b-image-block__slide {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 0 2px;
+  outline: none;
+  overflow: hidden;
+}
+.b-image-block__slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.b-image-block__slide:hover::after {
+  opacity: 0.3;
+}
+.b-image-block__slide-image {
+  display: block;
+  width: 100%;
+  transform: scale(1);
+  transition: 0.5s transform ease;
+}
+.b-image-block__slide:hover .b-image-block__slide-image {
+  transform: scale(1.1);
+}
+.ps-page {
+  width: 30%;
+}

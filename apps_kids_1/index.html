@@ -1,0 +1,160 @@
+<head>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .aibanner {
+            margin: 0;
+            padding: 0;
+        }
+
+        .aibanner-wrapper {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 400px;
+            font-size: 32px;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .aibanner-text {
+            display: block;
+            width: 85%;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            padding: .3em 0 0.3em;
+            margin: 0 auto;
+            text-align: center;
+            background: #f1f1f1;
+        }
+
+        .aibanner-text__title {
+            display: block;
+            margin: 0 0 .1em;
+            font: 63%/82% "ProximaNova Semibold", Helvetica, Arial, sans-serif;
+            
+        }
+
+        .aibanner-text__description {
+            display: block;
+            margin: 0;
+            font: 48%/100% "ProximaNova Regular", Helvetica, Arial, sans-serif;
+            color: #888;
+        }
+
+        .aibanner-sdkandroid .aibanner-text {
+            bottom: 0;
+            padding: .3em 0 0.75em;
+        }
+
+        .aibanner-sdkandroid.aibanner-tablet .aibanner-text,
+        .aibanner-appios.aibanner-tablet .aibanner-text {
+            width: 49%;
+            padding: .3em 0 0.7em;
+        }
+
+        .aibanner-sdkandroid.aibanner-tablet .aibanner-text__title,
+        .aibanner-appios.aibanner-tablet .aibanner-text__title {
+            margin: 0 0 .15em;
+            font: 2.2vw/96% "ProximaNova Semibold", Helvetica, Arial, sans-serif;
+        }
+
+        .aibanner-sdkandroid.aibanner-tablet .aibanner-text__description,
+        .aibanner-appios.aibanner-tablet .aibanner-text__description {
+            font: 1.8vw/100% "ProximaNova Regular", Helvetica, Arial, sans-serif;
+        }
+
+
+        @media all and (orientation: landscape) {}
+
+        @media all and (orientation: portrait) { 
+            .aibanner-wrapper {
+                height: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aibanner">
+        <a class="aibanner-wrapper js-counting-height js-ibanner-bg-image" style="background: url('//bs.lmcdn.ru/63799/mob_app_10700_GE.5915A192.jpg') 50% 0 no-repeat; background-size: cover;" href="/bs-click/74712;125419;LLHSXDGF@03vD040f1805EHTa4Wnn6AR?aim=/c/4154/default-kids/%3Flabels%3D7004%26sf%3D80%26pc%3DHELLO%26bs%3D1" target="_top">
+            <div class="aibanner-text">
+                <span class="aibanner-text__title">Скидка в приложении</span>
+                <span class="aibanner-text__description">Промокод: HELLO !!!</span>
+            </div>
+        </a>
+        <script type="text/javascript">
+            (function() {
+                var containers = document.querySelectorAll('.js-counting-height'),
+                    rationVertical = 1.6,
+                    rationHorisontal = 2.35;
+                        
+                this.init = function() {
+                    setHeightForContainer();
+                    
+                    if ('orientationchange' in window) {
+                        window.addEventListener('orientationchange', setHeightForContainer);
+
+                        return;
+                    }
+
+                    window.addEventListener('resize', setHeightForContainer);
+                }
+
+                function setHeightForContainer(deviceWidth, deviceHeight) {
+                    var deviceClientWidth  = document.documentElement.clientWidth,
+                        deviceClientHeight = document.documentElement.clientHeight,
+                        userAgent          = window.navigator.userAgent;
+
+                    if (userAgent.search(/LamodaAppAndroid/i) != -1) {
+                        for (var i=0; i < containers.length; i++) {
+                            if (containers[i].className.match(/aibanner-sdkandroid/)) continue;
+                            containers[i].className += ' aibanner-sdkandroid';
+                        }
+
+                        deviceClientWidth    = window.screen.width;
+                        deviceClientHeight   = window.screen.height;
+                    }
+
+                    if (userAgent.search(/LamodaAppIos/i) != -1) {
+                        for (var i=0; i < containers.length; i++) {
+                            if (containers[i].className.match(/aibanner-appios/)) continue;
+                            containers[i].className += ' aibanner-appios';
+                        }
+                    }
+
+                    if (userAgent.search(/DT\/tablet/i) != -1) {
+                        for (i=0; i < containers.length; i++) {
+                            if (containers[i].className.match(/aibanner-tablet/)) continue;
+                            containers[i].className += ' aibanner-tablet';
+
+                            /*if (containers[i].className.match(/aibanner-appios/)) {
+                                containers[i].style.height = deviceClientHeight > 400 ? '400px' : deviceClientHeight + 'px';
+                            }*/
+                        }
+
+                        return;
+                    }
+
+                    if (deviceClientWidth > deviceClientHeight) {
+                        for (i=0; i < containers.length; i++) {
+                            containers[i].style.height = (deviceClientWidth / rationHorisontal) + 'px';
+                        }
+                    } else {
+                        for (i=0; i < containers.length; i++) {
+                            containers[i].style.height = (deviceClientWidth / rationVertical) + 'px';
+                        }
+                    }
+                }
+
+                return this.init.apply(this, arguments);
+            })();
+        </script>
+    </div>
+</body>

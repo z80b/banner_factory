@@ -1,0 +1,165 @@
+<div class="banner-brands__width-wrapper">
+    <style>
+    .banner-brands-list {
+        background-color: #fff;
+        padding: 35px 0 5px;
+        text-align: center;
+    }
+    .banner-brands-list__title {
+        font: 32px/80px "ProximaNova Semibold";
+        text-align: center;
+        color: #111;
+        margin: 0;
+        word-spacing: -2px;
+    }
+    .banner-brands-list__content {
+        position: relative;
+        width: 1206px;
+        margin: 35px auto 25px;
+        padding: 0;
+    }
+    @media (max-width: 1206px) {
+        .banner-brands-list__content {
+            width: 960px;
+        }
+    }
+    .banner-brands-list__content .swiper-slide {
+        display: inline-block;
+        width: 155px;
+        outline: none;
+        background: 50% 50% no-repeat;
+    }
+    .widescreen .banner-brands-list__content .swiper-slide {
+        width: 196px;
+    }
+    .banner-brands-list__content .swiper-slide-wrap {
+        display: block;
+        height: 104px;
+        margin: auto;
+        outline: none;
+    }
+    .banner-brands-list__content .swiper-slide-helper {
+        width: 100px;
+        margin: 0 auto;
+    }
+    .banner-brands-list__content .swiper-slide-helper::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: 0 0;
+        transition: 0.2s width ease, 0.2s background-color ease;
+    }
+    .banner-brands-list__content .swiper-slide:hover .swiper-slide-helper::after {
+        width: 100px;
+        background-color: #000;
+    }
+    .banner-brands-list__content .slick-list {
+        overflow: hidden;
+    }
+    .banner-brands-list__content .slick-arrow {
+        position: absolute;
+        left: -18px;
+        top: 0;
+        width: 20px;
+        height: 100%;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 0;
+    }
+    .banner-brands-list__content .slick-arrow:before,
+    .banner-brands-list__content .slick-arrow:after {
+        content: '';
+        background: none;
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        height: 25px;
+        border-left: 2px solid #9f9f9f;
+        transform-origin: left bottom;
+        transform: translateY(-100%) rotate(45deg);
+    }
+    .banner-brands-list__content .slick-arrow:after {
+        transform-origin: left top;
+        transform: rotate(-45deg);
+    }
+    .banner-brands-list__content .slick-next {
+        left: auto;
+        right: -18px;
+        transform: rotateZ(180deg);
+    }
+    </style>
+    <div class="banner-brands-list">
+        <div class="banner-brands-list__content js-banner-brands-list">
+            <div class="swiper-slide" style="background-image:url('{{ files['mango.png'] | default('mango.png')">
+                <a class="swiper-slide-wrap" href="{{ links[0] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['lost.png'] | default('lost.png')">
+                <a class="swiper-slide-wrap" href="{{ links[1] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['nike.png'] | default('nike.png')">
+                <a class="swiper-slide-wrap" href="{{ links[2] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['gap.png'] | default('gap.png')">
+                <a class="swiper-slide-wrap" href="{{ links[3] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['LOGO.png'] | default('LOGO.png')">
+                <a class="swiper-slide-wrap" href="{{ links[4] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['oodji.png'] | default('oodji.png')">
+                <a class="swiper-slide-wrap" href="{{ links[5] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['new.png'] | default('new.png')">
+                <a class="swiper-slide-wrap" href="{{ links[6] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['benetton.png'] | default('benetton.png')">
+                <a class="swiper-slide-wrap" href="{{ links[7] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['adidas.png'] | default('adidas.png')">
+                <a class="swiper-slide-wrap" href="{{ links[8] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['topshop.png'] | default('topshop.png')">
+                <a class="swiper-slide-wrap" href="{{ links[9] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+            <div class="swiper-slide" style="background-image:url('{{ files['dotorhy.png'] | default('dotorhy.png')">
+                <a class="swiper-slide-wrap" href="{{ links[10] }}"></a>
+                <div class="swiper-slide-helper"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        document.addEventListener("DOMContentLoaded", function() {
+            $('.js-banner-brands-list').slick({
+                slidesToScroll: 6,
+                slidesToShow: 6,
+                speed: 400
+            });
+        });
+    })();
+    </script>
+</div>

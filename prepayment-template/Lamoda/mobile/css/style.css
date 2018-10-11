@@ -1,0 +1,392 @@
+.payture-block_error,
+.payture-description,
+.payture-title_error,
+.form-block__description {
+  font: 300 1.3em/1.38 sans-serif;
+  color: #999;
+}
+
+.payture-amount,
+.payture-card,
+.payture-card .field_block .field_right_column,
+.form-block__inner,
+.field__inner {
+  clear: both;
+}
+
+.payture-amount::after,
+.payture-card::after,
+.payture-card .field_block .field_right_column::after,
+.form-block__inner::after,
+.field__inner::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input, textarea, select {
+  -webkit-appearance: none;
+}
+
+.payture-block {
+  font-size: 10px;
+}
+
+@media (max-width: 720px) {
+  .payture-block {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .payture-block {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .payture-block {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 460px) {
+  .payture-block {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .payture-block {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .payture-block {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 720px) {
+  .payture-block {
+    font-size: 16px;
+  }
+}
+
+.payture-block_error {
+  color: #f45057;
+  border-bottom: solid 4px #eee;
+  padding: 1em 1.6em;
+}
+
+.payture-info__title {
+  font: 600 1.7em/2.35 sans-serif;
+  color: #222;
+  margin: 0;
+  text-align: center;
+}
+
+.payture-info__description {
+  font: 300 1.3em/1.38 sans-serif;
+  color: #999;
+  padding: 0 1.6em;
+}
+
+.payture-amount {
+  border-bottom: solid 4px #eee;
+}
+
+.payture-amount__title,
+.payture-amount__value {
+  font: 600 1.7em/2.76 sans-serif;
+  color: #222;
+  float: left;
+  padding: 0 1.6em;
+}
+
+.payture-amount__value {
+  float: right;
+}
+
+.payture-card {
+  padding: 1em 0;
+  border-bottom: solid 4px #eee;
+}
+
+.payture-card .field_label {
+  font: 300 1.3em/1.7 sans-serif;
+  color: #222;
+}
+
+.payture-card .field_description {
+  font: 300 1.3em/1.38 sans-serif;
+  color: #999;
+  clear: both;
+  padding: 0.4em 0;
+}
+
+.payture-card .field_block {
+  padding: 0 1.6em;
+}
+
+.payture-card .field_block #bigtext {
+  display: none;
+}
+
+.payture-card .field_block_line {
+  padding: 0;
+}
+
+.payture-card .field_block_line .field_label,
+.payture-card .field_block_line .field_description {
+  padding: 0 1.6em;
+}
+
+.payture-card .field_block .field_right_column.cvc_column {
+  position: relative;
+  background: repeating-linear-gradient(0, #fff, #fff 0.5em, #eee 0.5em, #eee 1em) 0 0.2em;
+  padding: 0.5em 1.6em;
+}
+.payture-card .field_block .field_right_column.cvc_column::before {
+  content: '';
+  position: absolute;
+  left: 2em; bottom: 0;
+  display: block;
+  width: 147px; height: 48px;
+  background: url(../i/signature.png) 50% 50% no-repeat;  
+}
+
+.payture-card .field_block .field_right_column .field_box {
+  float: left;
+  width: 48%;
+}
+
+.payture-card .field_block .field_right_column .field_box:first-child {
+  margin: 0 2% 0 0;
+}
+
+.payture-card .field_block .field_right_column .field_box:last-child {
+  margin: 0 0 0 2%;
+}
+
+.payture-card .field_block .text_input {
+  background: #fff;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: solid 1px #ddd;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font: 300 1.5em/1 sans-serif;
+  color: #222;
+  padding: 0.4em 0.54em;
+  text-align: center;
+}
+
+.payture-card .field_block .text_input#card_num {
+  width: 100%;
+}
+
+.payture-card .field_block .text_input#card_valid_month,
+.payture-card .field_block .text_input#card_valid_year {
+  width: 100%;
+}
+
+.payture-card .field_block .text_input#cvc_input {
+  float: right;
+  width: 5em;
+}
+
+.payture-card .field_block .field_block_error .text_input {
+  border-color: #f45057;
+}
+
+#payture-btn {
+  background: #5080fa;
+  display: block;
+  font: 600 1.5em/2.8 sans-serif;
+  color: #fff;
+  width: 90%;
+  margin: 1em auto 0;
+  text-align: center;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#payture-btn.in_disabled {
+  background: #eee;
+}
+
+#payture-cantsubmit {
+  display: block;
+  width: 100%;
+  font: 600 1.5em/1 sans-serif;
+  color: #5983f0;
+  padding: 1.3em 0;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+
+#payture-cantsubmit.in_disabled {
+  color: #eee;
+}
+
+.payture-description {
+  border-top: solid 1px #eee;
+  padding: 1.6em;
+}
+
+.payture-title_error {
+  color: #f45057;
+  border-bottom: solid 4px #eee;
+  padding: 0 1.6em;
+}
+
+.payture-title_error #payture-title-error {
+  display: none;
+  padding: 1em 0;
+}
+
+.card-form {
+  display: block;
+}
+
+.card-form__block {
+  padding: 0 1.6em;
+}
+
+.card-form__border {
+  border: solid #eee;
+  border-width: 4px 0;
+  padding: 1em 0 2em;
+}
+
+.card-form__submit {
+  background: #5080fa;
+  display: block;
+  font: 600 1.5em/2.8 sans-serif;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.card-form__submit.disabled {
+  background: #eee;
+}
+
+.card-form__cantsubmit {
+  display: block;
+  width: 100%;
+  font: 600 1.5em/1 sans-serif;
+  color: #5983f0;
+  padding: 1.3em 0;
+  text-align: center;
+}
+
+.card-form__cantsubmit.disabled {
+  color: #eee;
+}
+
+.form-block_cvv {
+  padding: 0;
+}
+
+.form-block_cvv .field__label,
+.form-block_cvv .field__description {
+  padding: 0 1.6em;
+}
+
+.form-block__inner {
+  margin: 0 -1.5%;
+}
+
+.form-block_validity .form-block__field {
+  float: left;
+  width: 47%;
+  margin: 0 1.5%;
+}
+
+.form-block__description {
+  border-top: solid 1px #eee;
+  padding: 1.6em;
+}
+
+.form-block__submit {
+  padding: 1.6em 1.6em 0;
+}
+
+.field__label {
+  font: 300 1.3em/1.7 sans-serif;
+  color: #222;
+}
+
+.field__description {
+  font: 300 1.3em/1.38 sans-serif;
+  color: #999;
+  clear: both;
+  padding: 0.4em 0;
+}
+
+.field__inner {
+  margin: 0 -1.5%;
+}
+
+.field__inner_cvv {
+  background: repeating-linear-gradient(0, #fff, #fff 0.5em, #eee 0.5em, #eee 1em) 0 0.2em;
+  margin: 0;
+  padding: 0.5em 1.6em;
+}
+
+.field__input {
+  background: #fff;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: solid 1px #ddd !important;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font: 300 1.5em/1 sans-serif;
+  color: #222;
+  padding: 0.4em 0.54em;
+  text-align: center;
+  box-shadow: none;
+}
+
+.field__input_cvv {
+  float: right;
+  width: 4em;
+}
+
+.error .field__input {
+  border-color: #f45057;
+}
+
+.form-block_validity .field__input {
+  width: 100%;
+}
+
+.form-block_card-number .field__input {
+  float: left;
+  width: 22%;
+  margin: 0 1.5%;
+}

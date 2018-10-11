@@ -1,0 +1,114 @@
+<style type="text/css">
+    .footer__sticky-items {
+        width: 36%;
+    }
+    .footer__sticky-right .footer__sticky-item {
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .footer__sticky {
+        background-color: #000;
+    }
+    .footer__sticky .footer__link,
+    .footer__sticky .ii-footer__link {
+        color: #fff;
+    }
+    .footer__sticky-item .footer__sale17-link {
+        display: inline-block;
+        height: 100%;
+        padding: 0;
+        width: 100%;
+    }
+    .footer__sale17-text {
+        vertical-align: top;
+        letter-spacing: .08em;
+        font-weight: 100;
+    }
+    .footer__sale17-counter {
+        color: #fe2832;
+        text-align: center;
+        display: inline-block;
+        width: 100px;
+        font-weight: 300;
+    }
+    .footer__sale17-img {
+        margin-left: 15px;
+        vertical-align: top;
+    }
+    .footer__sale17-look {
+        display: inline-block;
+        margin-left: 25px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #888;
+        letter-spacing: .08em;
+        font-weight: 100;
+        width: 148px;
+        line-height: 28px;
+        -webkit-transition: .5s all ease;
+        transition: .5s all ease;
+    }
+
+    .footer__sale17-look:hover {
+        background: #fff;
+        color: #000;
+    }
+</style>
+<div class="footer__sticky-item">
+    <a class="footer__link footer__sale17-link" href="/sale">
+        <span class="footer__sale17-text">Распродажа: скидки до 70%<span class="footer__sale17-counter js-sale17-counter">2 642 758</span>товаров уже продано</span>
+        <img class="footer__sale17-img" src="data:image/png;base64,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">
+        <span class="footer__sale17-look" href="#">Смотреть</span>
+    </a>
+</div>
+<script type="text/javascript">
+(function(d){
+    Date.prototype.setTimezoneOffset = function(minutes) { 
+        var _minutes;
+        if (this.timezoneOffset == _minutes) {
+            _minutes = this.getTimezoneOffset();
+        } else {
+            _minutes = this.timezoneOffset;
+        }
+        if (arguments.length) {
+            this.timezoneOffset = minutes;
+        } else {
+            this.timezoneOffset = minutes = this.getTimezoneOffset();
+        }
+        return this.setTime(this.getTime() + (_minutes - minutes) * 6e4);
+    }
+
+    function getTimeObject(timeZone) {
+        var t = new Date()
+        timeZone && t.setTimezoneOffset(timeZone);
+        return {
+            'date': t.getDate(),
+            'month': t.getMonth() + 1, 
+            'hours'  : t.getHours(),
+            'minutes': t.getMinutes(),
+            'seconds': t.getSeconds()
+        }
+    }
+
+    var $container = document.querySelector('.js-sale17-counter');
+    var timeZone = parseInt($container.getAttribute('data-timezone')) * -.6;
+    var timer;
+    var dx = {"06/21":137728,"06/22":278930,"06/23":428856,"06/24":567907,"06/25":688563,"06/26":785422,"06/27":889983,"06/28":1008250,"06/29":1128957,"06/30":1253014,"07/01":1379376,"07/02":1489276,"07/03":1585508,"07/04":1684768,"07/05":1793381,"07/06":1922257,"07/07":2066582,"07/08":2192837,"07/09":2312626,"07/10":2411601,"07/11":2519230,"07/12":2634597,"07/13":2756516,"07/14":2884056,"07/15":3004349,"07/16":3126656,"07/17":3221552,"07/18":3330654,"07/19":3445702,"07/20":3561583,"07/21":3677664,"07/22":3788396,"07/23":3897516,"07/24":3993715,"07/25":4093424,"07/26":4214428,"07/27":4332597,"07/28":4461906,"07/29":4578154,"07/30":4680758,"07/31":4768047,"08/01":4866371,"08/02":4975726,"08/03":5109541,"08/04":5226755,"08/05":5361412,"08/06":5457615,"08/07":5548215,"08/08":5647701,"08/09":5758911,"08/10":5879848,"08/11":6000676,"08/12":6113268,"08/13":6247472,"08/14":6365368,"08/15":6487602,"08/16":6628302,"08/17":6757871,"08/18":6896150,"08/19":7044687,"08/20":7155369,"08/21":7256059,"08/22":7360434,"08/23":7488130,"08/24":7643545,"08/25":7875275,"08/26":8002004,"08/27":8117723,"08/28":8217959,"08/29":8332831,"08/30":8454650,"08/31":8585662};
+    var sx = [ 1.3, 0.8, 0.4, 0.3, 0.2, 0.3, 0.5, 0.6, 1, 1.5, 2, 2.1, 2.1, 2.1, 2.3, 2.3, 2.2, 2.1, 1.8, 1.7, 1.8, 2, 2.1, 2 ];
+    var hx = sx.map(function(v,i) { return i ? sx[i-1]*3600 : 0 });
+
+    timer = setInterval(function() {
+        var dt = getTimeObject(timeZone);
+        var dxKey = (dt.month > 9 ? dt.month : '0'+ dt.month) + '/' + (dt.date > 9 ? dt.date : '0'+ dt.date);
+        var count = Math.round(dx[dxKey] + hx[dt.hours] + sx[dt.hours] * dt.minutes * 60 + sx[dt.hours] * dt.seconds)+'';
+        if (count && !isNaN(count)) {
+            if (Math.round(Math.random())) $container.innerText = count.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        } else {
+            $container.innerText = (''+dx['08/31']).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+            clearTimeout(timer);
+        }
+    }, 1000);
+})(document);
+</script>

@@ -1,9 +1,114 @@
-<div class="b-test-banner">
-	<h2 class="b-test-banner__title">Title</h2>
-	<div class="b-test-banner__body">
-		<p>Hello world.</p>
-		<p>Hello world.</p>
-		<p>Hello world.</p>
+
+<style>
+.b-97128465 {
+    display: block;
+}
+.b-97128465__content {
+    margin: 0 0 0 -20px;
+    font: 0/0 none;
+    text-align: center;
+}
+.b-97128465__banner {
+    position: relative;
+    display: inline-block;
+    width: 470px;
+    height: 200px;
+    margin: 0 0 0 20px;
+    background: 100% 0 no-repeat;
+    background-size: auto 100%;
+}
+.b-97128465__banner[href]::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+.b-97128465__banner[href]:hover::after {
+    opacity: .2;
+}
+.b-97128465__text {
+    position: absolute;
+    display: block;
+    width: 50%;
+    padding: 20px;
+    font: 14px/1 "ProximaNova Light";
+    text-align: left;
+    box-sizing: border-box;
+    word-break: break-all;
+    white-space: pre-line;
+    color: #555;
+}
+.b-97128465__logo {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50%; height: 100%;
+    background: 50% 50% no-repeat;
+    box-sizing: border-box;
+}
+.widescreen .b-97128465__banner {
+    width: 593px; height: 253px;
+}
+.b-97128465--three .b-97128465__banner {
+    width: 306px;
+}
+.widescreen .b-97128465--three .b-97128465__banner {
+    width: 388px;
+}
+.b-97128465--four .b-97128465__banner {
+    width: 225px;
+}
+.widescreen .b-97128465--four .b-97128465__banner {
+    width: 285px;
+}
+.b-97128465--three .b-97128465__text,
+.b-97128465--four .b-97128465__text {
+    width: 100%;
+}
+
+.b-97128465--three .b-97128465__logo,
+.b-97128465--four .b-97128465__logo {
+    width: 100%;
+    background-position: 50% 100%;
+    border-bottom: solid 20px transparent;
+}
+</style>
+<div class="b-97128465 b-97128465--four">
+	<div class="b-97128465__content">
+	
+	    <a  class="b-97128465__banner"
+	    	
+	    	style="background-image: url(https://lamoda.dev/bs-hit/test-banner/brand-group-ip-01.jpg)">
+	    	<span class="b-97128465__text">При любой сумме заказа.
+Скидка распространяется
+на товары, представленные
+на данной странице.</span>
+	    	
+    	</a>
+	
+	    <a  class="b-97128465__banner"
+	    	href="/??/??/"
+	    	style="background-image: url(https://lamoda.dev/bs-hit/test-banner/brand-group-ip-02.jpg)">
+	    	
+	    	<span class="b-97128465__logo" style="background-image: url(https://lamoda.dev/bs-hit/test-banner/brand-group-ip-logo.png)"></span>
+    	</a>
+	
+	    <a  class="b-97128465__banner"
+	    	href="/??/??/"
+	    	style="background-image: url(https://lamoda.dev/bs-hit/test-banner/brand-group-ip-03.jpg)">
+	    	
+	    	
+    	</a>
+	
+	    <a  class="b-97128465__banner"
+	    	href="/??/??/"
+	    	style="background-image: url(https://lamoda.dev/bs-hit/test-banner/brand-group-ip-01.jpg)">
+	    	
+	    	
+    	</a>
+	
 	</div>
-	<a class="b-test-banner__link" href="/">Push me !!!</a>
 </div>

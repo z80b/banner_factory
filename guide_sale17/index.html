@@ -1,0 +1,89 @@
+
+
+<div class="lp-block lp-guide">
+    <div class="lp-guide__title">Гид по летней распродаже</div>
+    <div class="lp-guide__text js-ibanner-copy-code">
+        <span>Все лето один промокод:</span>
+        <div class="lp-guide__button b-promo-code-button js-guide-banner-promo-button">
+            <b class="js-promo-code">LETO</b>
+            <span class="lp-guide__button-hint js-hint" data-hint-position="hint-top">Кликните, чтобы скопировать</span>
+        </div>
+    </div>
+    <div class="lp-guide__banners js-guide-slider">
+        <div class="lp-guide__banner lp-guide__banner--disabled">
+            <img class="lp-guide__banner-image" src="//bs.lmcdn.ru/67674/40.594BDC8B.jpg"/>
+            <span class="lp-guide__banner-title">Завершено</span>
+        </div>
+        <div class="lp-guide__banner lp-guide__banner--disabled">
+            <img class="lp-guide__banner-image" src="//bs.lmcdn.ru/67674/40.594BDC8B.jpg"/>
+            <span class="lp-guide__banner-title">Завершено</span>
+        </div>
+        <div class="lp-guide__banner lp-guide__banner--disabled">
+            <img class="lp-guide__banner-image" src="//bs.lmcdn.ru/67674/40.594BDC8B.jpg"/>
+            <span class="lp-guide__banner-title">Завершено</span>
+        </div>
+        <a class="lp-guide__banner lp-guide__banner--centred" href="/bs-click/78786;132374;LKEGQUk4602@SV40f1803muOBrPFXGYn?aim=/bg/31/brand-group-mango/">
+            <img class="lp-guide__banner-image" src="//bs.lmcdn.ru/67674/50.594BDC8B.jpg"/>
+            <span class="lp-guide__banner-title">Сегодня</span>
+        </a>
+        <a class="lp-guide__banner js-action-item-scratch" href="/bs-click/78786;132374;LKEGQUk4602@SV40f1803muOBrPFXGYn?aim=/bg/31/brand-group-mango/">
+            <img class="lp-guide__banner-image" src="//bs.lmcdn.ru/67674/50.594BDC8B.jpg"/>
+            <span class="lp-guide__banner-title">Сегодня</span>
+        </a>
+        <a class="lp-guide__banner js-action-item-scratch" href="/bs-click/78786;132375;LKEGQUk4602@SV40f1803muOBrPFXGYn?aim=/bg/31/brand-group-mango/">
+            <img class="lp-guide__banner-image" src="//bs.lmcdn.ru/67674/60.594BDC8B.jpg"/>
+            <span class="lp-guide__banner-title">Скоро</span>
+        </a>
+    </div>
+</div>
+<script>
+    (function() {
+        this.init = function() {
+            nativeCopy();
+        }
+
+        function nativeCopy() {
+            console.log('fsdfsdffd');
+            var copyButtons = document.querySelectorAll('.js-guide-banner-promo-button');
+
+            for (var i=0; i<copyButtons.length; i++) {
+                if (!copyButtons[i]) return;
+
+                copyButtons[i].onclick = copy;
+                copyButtons[i].onmouseover = function() {
+                    var hint = this.querySelector('.js-hint');
+                    hint.innerHTML = 'Кликните, чтобы скопировать';
+                    hint.style.opacity = 1;
+                }
+                copyButtons[i].onmouseout = function() {
+                    var hint = this.querySelector('.js-hint');
+                    hint.style.opacity = 0;
+                }
+            }
+
+            function copy() {
+                var tempElem = document.createElement('textarea'),
+                    code     = this.querySelector('.js-promo-code').innerHTML,
+                    hint     = this.querySelector('.js-hint');
+
+                tempElem.id = 'tempElem';
+                tempElem.style.height = 0;
+                document.body.appendChild(tempElem);
+
+                tempElem.value = code;
+
+                var selector = document.querySelector('#tempElem');
+
+                selector.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElem);
+
+                hint.innerHTML = 'Код скопирован';
+                hint.style.opacity = 1;
+            }
+        }
+
+        return this.init.apply(this, arguments);
+
+    })();
+</script>

@@ -1,0 +1,167 @@
+
+<div>
+<style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .aibanner {
+            margin: 0;
+            padding: 0;
+        }
+
+        .aibanner-wrapper {
+            position: relative;
+            display: block;
+            width: 100%;
+            /*height: 400px;*/
+            height: auto;
+            font-size: 32px;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .aibanner-text {
+            display: block;
+            width: 85%;
+            padding: 0.6em 0;
+            margin: 0 auto;
+            text-align: center;
+            background: #fff;
+        }
+
+        .aibanner-text__title {
+            display: block;
+            margin: 0 0 0.3em;
+            font: 63%/82% "ProximaNova Semibold", Helvetica, Arial, sans-serif;
+        }
+
+        .aibanner-text__description {
+            display: block;
+            margin: 0;
+            font: 48%/100% "ProximaNova Regular", Helvetica, Arial, sans-serif;
+            color: #888;
+        }
+
+        .aibanner-sdkandroid .aibanner-text {
+            width: 100%;
+            bottom: 0;
+        }
+
+        .aibanner-appios .aibanner-text {
+            width: 100%;
+        }
+
+        .aibanner-sdkandroid.aibanner-tablet .aibanner-text,
+        .aibanner-appios.aibanner-tablet .aibanner-text {
+            padding: .3em 0 0.7em;
+        }
+
+        .aibanner-tablet .aibanner-text__title {
+            margin: 0 0 .15em;
+            font: 2.4vw/96% "ProximaNova Semibold", Helvetica, Arial, sans-serif;
+        }
+
+        .aibanner-tablet .aibanner-text__description {
+            font: 1.8vw/100% "ProximaNova Regular", Helvetica, Arial, sans-serif;
+        }
+
+        .aibanner-appios .lp-slot,
+        .aibanner-sdkandroid .lp-slot {
+            margin-bottom: 2.5em;
+        }
+
+        .aibanner-appios.aibanner-tablet .lp-slot,
+        .aibanner-sdkandroid.aibanner-tablet .lp-slot {
+            margin-bottom: 0;
+        }
+
+        .aibanner__img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /*.android-old-version .aibanner__img,
+        .aibanner-sdkandroid .aibanner__img,
+        .aibanner-appios .aibanner__img {
+            display: block;
+        }*/
+
+        .android-old-version .aibanner-wrapper,
+        .aibanner-sdkandroid .aibanner-wrapper,
+        .aibanner-appios .aibanner-wrapper {
+            background: none !important;
+            height: auto !important;
+        }
+
+        .android-old-version .l-page,
+        .aibanner-sdkandroid .l-page,
+        .aibanner-appios .l-page {
+            margin-bottom: 0 !important;
+        }
+
+        .android-old-version .aibanner-text,
+        .aibanner-sdkandroid .aibanner-text,
+        .aibanner-appios .aibanner-text {
+            position: static !important;
+        }
+
+        .aibanner-appios.aibanner-tablet .aibanner-text {
+            position: absolute !important;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+<div class="aibanner">
+<a class="aibanner-wrapper js-counting-height js-ibanner-bg-image" href="/bs-click/727035?hit_id=1528107656889592747&slot_name=mob_woman_banner_top_1&aim=/c/4153/default-women/%3Flabels%3D29867%26sf%3D381" target="_top">
+<img alt="banner" class="aibanner__img" src="//g.lmcdn.ru/bs2/100143/app_1_W_12557_EG.5A8BE527.jpg"/>
+<div class="aibanner-text">
+<span class="aibanner-text__title">На старт!</span>
+<span class="aibanner-text__description">Новые коллекции весна-лето 2018</span>
+</div>
+</a>
+<script type="text/javascript">
+            (function() {
+                this.init = function() {
+                    bannerType();
+                }
+
+                function bannerType() {
+                    var userAgent = window.navigator.userAgent,
+                        body      = document.body;
+
+                    if (userAgent.search(/LamodaAppAndroid/i) != -1) {
+                        checkAndSetClassToElem(body, 'aibanner-sdkandroid', 'aibanner-sdkandroid');
+
+                        var pv = userAgent.match(/PV\/\d+.\d+/i);
+
+                        if (+pv[0].split('/')[1] <= 4.3) {
+                            checkAndSetClassToElem(body, 'android-old-version', 'android-old-version');
+                        }
+                    }
+
+                    if (userAgent.search(/LamodaAppIos/i) != -1) {
+                        checkAndSetClassToElem(body, 'aibanner-appios', 'aibanner-appios');
+                    }
+
+                    if (userAgent.search(/DT\/tablet/i) != -1) {
+                        checkAndSetClassToElem(body, 'aibanner-tablet', 'aibanner-tablet');
+                    }
+                }
+
+                function checkAndSetClassToElem(elem, checkClass, setClass) {
+                    if (!elem.className.match(checkClass)) {
+                        elem.className += ' '+setClass;
+                    }
+                }
+
+                return this.init.apply(this, arguments);
+            })();
+        </script>
+</div>
+</div>

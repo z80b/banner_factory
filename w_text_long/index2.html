@@ -1,0 +1,178 @@
+<div class="beauty-slider">
+<style type="text/css">
+.beauty-slider {
+    width: 960px;
+    margin: auto;
+    clear: both;
+}
+.widescreen .beauty-slider {
+    width: 1206px;
+}
+.beauty-slider__content {
+    width: 100%;
+    padding: 0 0 22px;
+}
+.beauty-slider__title {
+    display: block;
+    margin: 0;
+    padding: 15px 0 35px;
+    text-align: center;
+    font: 22px/1 "ProximaNova Semibold";
+    color: #333;
+}
+.beauty-slider__body {
+    width: 100%;
+    position: relative;
+}
+.beauty-slider__slides {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+}
+.beauty-slider__slides.slick-initialized {
+    opacity: 1;
+}
+.beauty-slider__slides .slick-track {
+    text-align: center;
+    margin: auto;
+}
+.beauty-slider__slide {
+    display: block;
+    width: 192px;
+    float: left;
+}
+.widescreen .beauty-slider__slide {
+    width: 201px;
+}
+.beauty-slider__slide__icon {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: 50% 50% no-repeat;
+    background-size: 120px 120px;
+    margin: auto;
+    -webkit-transition: .5s opacity ease;
+    -moz-transition: .5s opacity ease;
+    transition: .5s opacity ease;
+}
+.beauty-slider__slide__title {
+    display: block;
+    text-align: center;
+    font: 13px/1.4 "ProximaNova Regular";
+    padding: 16px 25px;
+    color: #333;
+}
+.beauty-slider__slides:hover .beauty-slider__slide__icon {
+    opacity: .4;
+}
+.beauty-slider__slides:hover .beauty-slider__slide__title {
+    color: #888;
+}
+.beauty-slider__slides:hover .beauty-slider__slide:hover .beauty-slider__slide__icon {
+    opacity: 1;
+}
+.beauty-slider__slides:hover .beauty-slider__slide:hover .beauty-slider__slide__title {
+    color: #333;
+}
+.beauty-slider__arrow {
+    position: absolute;
+    width: 22px;
+    height: 100%;
+    top: 0;
+    background: 50% 38px no-repeat;
+    cursor: pointer;
+    -webkit-transition: .5s opacity ease;
+    -moz-transition: .5s opacity ease;
+    transition: .5s opacity ease;
+}
+.beauty-slider__arrow:hover {
+    opacity: .4;
+}
+.beauty-slider__arrow--prev {
+    left: -22px;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#333'/></svg>") 
+}
+.beauty-slider__arrow--next {
+    right: -22px;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#333'/></svg>") 
+}
+</style>
+<div class="beauty-slider__content">
+    <h1 class="beauty-slider__title">Лучшие предложения дня</h1>
+    <div class="beauty-slider__body">
+        <div class="beauty-slider__slides js-beauty-slider-slides">
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-01.png')"></span>
+                <span class="beauty-slider__slide__title">Туалетная вода</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-02.png')"></span>
+                <span class="beauty-slider__slide__title">Очищающие средства для лица</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-03.png')"></span>
+                <span class="beauty-slider__slide__title">Помада</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-04.png')"></span>
+                <span class="beauty-slider__slide__title">Тональные средства</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-05.png')"></span>
+                <span class="beauty-slider__slide__title">Тени</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-06.png')"></span>
+                <span class="beauty-slider__slide__title">Тушь</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-01.png')"></span>
+                <span class="beauty-slider__slide__title">Туалетная вода</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-02.png')"></span>
+                <span class="beauty-slider__slide__title">Очищающие средства для лица</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-03.png')"></span>
+                <span class="beauty-slider__slide__title">Помада</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-04.png')"></span>
+                <span class="beauty-slider__slide__title">Тональные средства</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-05.png')"></span>
+                <span class="beauty-slider__slide__title">Тени</span>
+            </a>
+            <a class="beauty-slider__slide" href="/">
+                <span class="beauty-slider__slide__icon" style="background-image: url('/bs-hit/w_text_long/icon-06.png')"></span>
+                <span class="beauty-slider__slide__title">Тушь</span>
+            </a>
+        </div>
+        <div class="beauty-slider__arrow beauty-slider__arrow--prev"></div>
+        <div class="beauty-slider__arrow beauty-slider__arrow--next"></div>
+    </div>
+</div>
+<script type="text/javascript">
+(function(w,d) {
+    window.onload = function() {
+        window.ssss = $('.js-beauty-slider-slides').slick({
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 5,
+            prevArrow: '.beauty-slider__arrow--prev',
+            nextArrow: '.beauty-slider__arrow--next',
+            responsive: [{
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 5
+                }
+            }]
+        });
+    }
+})(window, document);    
+</script>
+</div>

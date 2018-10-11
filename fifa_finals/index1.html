@@ -1,0 +1,61 @@
+<div class="lp-popup__wrapper">
+    <div class="lp-popup__overlay"></div>
+    <div
+        class="lp-popup js-vote-popup"
+        data-url="/fifa/bet"
+        data-match-id="5"
+        data-game="Россия - Бразилия"
+        data-error="Попробуйте еще раз позже."
+        data-success="Данные успешно отправлены.">
+        <div class="lp-match__content">
+            <h2 class="lp-match__title">Хотите угадать счет матча?</h2>
+            <div class="lp-match__results lp-results">
+                <div class="lp-results__block js-winner" data-winner="Россия">
+                    <img class="lp-results__flag" src="/bs-hit/fifa_vote/flag-ru.png"/>
+                    <h3 class="lp-results__title">Россия</h3>
+                    <div class="lp-form__field lp-field">
+                        <input
+                            class="lp-results__score"
+                            name="score1"
+                            type="number"
+                            min="0"
+                            max="100"
+                            placeholder="Укажите счет..." />
+                            <span class="lp-field__error js-field-error"></span>
+                    </div>
+                </div>
+                <div class="lp-results__block js-winner" data-winner="Бразилия">
+                    <img class="lp-results__flag" src="/bs-hit/fifa_vote/flag-br.png"/>
+                    <h3 class="lp-results__title">Бразилия</h3>
+                    <div class="lp-form__field lp-field">
+                        <input
+                            class="lp-results__score"
+                            name="score2"
+                            type="number"
+                            min="0"
+                            max="100"
+                            placeholder="Укажите счет..." />
+                        <span class="lp-field__error js-field-error"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="lp-match__voting lp-voting">
+                <form class="lp-voting__form lp-form">
+                    <div class="lp-form__left js-form-body">
+                        <div class="lp-form__field lp-field">
+                            <input
+                                class="lp-form__email lp-form__input"
+                                type="text"
+                                name="email"
+                                autocomplete="off"
+                                placeholder="Для голосования введите ваш e-mail" />
+                            <span class="lp-field__error js-field-error"></span>
+                        </div>
+                        <button class="lp-form__submit" type="submit">Голосовать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button class="lp-popup__close">✕</button>
+    </div>
+</div>

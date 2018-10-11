@@ -1,0 +1,80 @@
+<div class="b-menu-banner__wrapper">
+<style type="text/css">
+.b-menu-banner {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+.b-menu-banner__wrapper {
+    display: block;
+    position: relative;
+}
+.b-menu-banner__image {
+    display: block;
+}
+.b-menu-banner__image-wrapper {
+    position: relative;
+}
+.b-menu-banner__image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: .5s opacity ease;
+    -moz-transition: .5s opacity ease;
+    -o-transition: .5s opacity ease;
+    transition: .5s opacity ease;
+}
+.b-menu-banner__wrapper:hover .b-menu-banner__image-wrapper::after {
+    opacity: .2;
+}
+.b-menu-banner__title, .b-menu-banner__text {
+    display: block;
+    color: #222;
+}
+.b-menu-banner__title {
+    font: 18px/1 "ProximaNova Semibold";
+    padding: 15px 0 5px;
+}
+.b-menu-banner__text {
+    font: 14px/1 "ProximaNova Regular";
+}
+.b-menu-banner__button {
+    position: absolute;
+    font: 13px/40px "ProximaNova Light";
+    display: block;
+    width: 150px;
+    top: 104px;
+    left: 67px;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: .5s opacity ease;
+    -moz-transition: .5s opacity ease;
+    -o-transition: .5s opacity ease;
+    transition: .5s opacity ease;
+}
+.b-menu-banner:hover + .b-menu-banner__button {
+    opacity: 1;
+}
+.b-menu-banner + .b-menu-banner__button:hover,
+.b-menu-banner:hover + .b-menu-banner__button:hover {
+    opacity: .8;
+}
+</style>
+<a class="b-menu-banner" href="{{ links[0] }}">
+    <div class="b-menu-banner__image-wrapper">
+        <img
+            class="b-menu-banner__image"
+            src="{{ files['odezhda_w.jpg'] | default('https://bs.lmcdn.ru/adm/fileuploads/122991/odezhda_w.jpg') }}"/>
+    </div>
+    <span class="b-menu-banner__title">Весна-лето 2018</span>
+    <span class="b-menu-banner__text">Одежда из новых коллекций</span>
+</a>
+<a class="b-menu-banner__button" href="{{ links[0] }}">Смотреть</span>
+</div>

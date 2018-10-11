@@ -1,0 +1,143 @@
+﻿<style>
+    .ip-banner {
+        position: relative;
+        max-height: 390px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .ip-banner__image_wide {
+        display: none;
+    }
+    .widescreen .ip-banner__image_narrow {
+        display: none;
+    }
+    .widescreen .ip-banner__image_wide {
+        display: inline-block;
+    }
+
+    .ip-banner__promo-block {
+        position: absolute;
+        top: 190px;
+        width: 100%;
+        font: 16px/44px "ProximaNova Light", "Arial";
+        vertical-align: middle;
+    }
+    .ip-banner__promo-text {
+        color: #fff;
+    }
+    .ip-banner__promo-button {
+        position: relative;
+        display: inline-block;
+        color: #ffe13d;
+        margin: 0 0 0 20px;
+        cursor: pointer;
+    }
+    .ip-banner__promo-hint {
+        position: absolute;
+        width: 195px;
+        color: #333;
+        background-color: #fff;
+        left: -70px;
+        bottom: 54px;
+        opacity: 0;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        border: solid 1px #ccc;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        -moz-transition: .5s opacity ease;
+        -webkit-transition: .5s opacity ease;
+        transition: .5s opacity ease;
+    }
+    .ip-banner__promo-hint::before,  .ip-banner__promo-hint::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+    }
+    .ip-banner__promo-hint::before {
+        margin-left: -12px;
+        border-top: 12px solid #ccc;
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+    }
+    .ip-banner__promo-hint::after {
+        margin-left: -10px;
+        border-top: 12px solid #fff;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
+    .ip-banner__promo-description {
+        font-size: 11px;
+        padding-top: 14px;
+        color: #aaa;
+        line-height: 1.5;
+        text-align: left;
+    }
+</style>
+<div class="ip-banner">
+    <img class="ip-banner__image ip-banner__image_narrow" src="{{ files['small.jpg'] | default('small.jpg') }}"/>
+    <img class="ip-banner__image ip-banner__image_wide" src="{{ files['big.jpg'] | default('big.jpg') }}"/>
+    <div class="ip-banner__promo-block js-ibanner-copy-code">
+        <span class="ip-banner__promo-text">Всю неделю промокод:</span>
+        <div class="ip-banner__promo-button js-guide-banner-promo-button">
+            <b class="js-promo-code">SALE4U</b>
+            <span class="ip-banner__promo-hint js-hint" data-hint-position="hint-top" style="opacity: 0;">Кликните, чтобы скопировать</span>
+        </div>
+    </div>
+    <div class="ip-banner__promo-description">Мелкий текст под баннером ...</div>
+</div>
+<script>
+    (function() {
+        this.init = function() {
+            nativeCopy();
+        }
+
+        function nativeCopy() {
+            var copyButtons = document.querySelectorAll('.js-guide-banner-promo-button');
+
+            for (var i=0; i<copyButtons.length; i++) {
+                if (!copyButtons[i]) return;
+
+                copyButtons[i].onclick = copy;
+                copyButtons[i].onmouseover = function() {
+                    var hint = this.querySelector('.js-hint');
+                    hint.innerHTML = 'Кликните, чтобы скопировать';
+                    hint.style.opacity = 1;
+                }
+                copyButtons[i].onmouseout = function() {
+                    var hint = this.querySelector('.js-hint');
+                    hint.style.opacity = 0;
+                }
+            }
+
+            function copy() {
+                var tempElem = document.createElement('textarea'),
+                    code     = this.querySelector('.js-promo-code').innerHTML,
+                    hint     = this.querySelector('.js-hint');
+
+                tempElem.id = 'tempElem';
+                tempElem.style.height = 0;
+                document.body.appendChild(tempElem);
+
+                tempElem.value = code;
+
+                var selector = document.querySelector('#tempElem');
+
+                selector.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElem);
+
+                hint.innerHTML = 'Код скопирован';
+                hint.style.opacity = 1;
+            }
+        }
+
+        return this.init.apply(this, arguments);
+
+    })();
+</script>

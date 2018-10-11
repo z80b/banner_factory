@@ -1,33 +1,33 @@
 var gulp     = require('gulp'),
-	pug      = require('gulp-pug'),
-	stylus   = require('gulp-stylus'),
-	prefixer = require('gulp-autoprefixer'),
-	include  = require('gulp-include'),
-	coffee   = require('gulp-coffee'),
-	minify   = require('gulp-minify'),
-	gulpif   = require('gulp-if'),
-	debug    = true;
+    pug      = require('gulp-pug'),
+    stylus   = require('gulp-stylus'),
+    prefixer = require('gulp-autoprefixer'),
+    include  = require('gulp-include'),
+    coffee   = require('gulp-coffee'),
+    minify   = require('gulp-minify'),
+    gulpif   = require('gulp-if'),
+    debug    = true;
 
 gulp.task('default', [ 'html' ], function() {
-	gulp.watch('../**/*.*', [ 'html' ]);
+    gulp.watch('../**/*.*', [ 'html' ]);
 });
 
 gulp.task('html', [ 'styles' ], function() {
-	return gulp.src('html/index.pug')
-		.pipe(pug({ pretty: !debug ? false : '    ' }))
-		.pipe(gulp.dest('.'));
+    return gulp.src('html/index.pug')
+        .pipe(pug({ pretty: !debug ? false : '    ' }))
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('styles', function() {
-	return gulp
-		.src('css/index.styl')
+    return gulp
+        .src('css/index.styl')
         .pipe(stylus({
             'include css': true,
             'compress': !debug,
             'rawDefine': { 'inline-image': stylus.stylus.url() }
         }))
         .pipe(prefixer(['> 0%']))
-		.pipe(gulp.dest('css'));
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task('scripts', function(){

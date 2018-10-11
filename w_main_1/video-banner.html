@@ -1,0 +1,113 @@
+<div class="sq-main-banner200180920 js-lazy-image" data-src="//a.lmcdn.ru/bs2/0/39/hp_7_lookbook_13955_eg.jpg">
+    <style>
+        .sq-main-banner200180920 {
+            position: relative;
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sq-main-banner200180920 .main-banner__item,
+        .sq-main-banner200180920 .main-banner__video {
+            position: relative;
+            display: block;
+        }
+        .sq-main-banner200180920 .main-banner__video-wrapper {
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .sq-main-banner200180920 .main-banner__video {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: -50px;
+            height: 581px;
+            border: none;
+        }
+        
+        .widescreen .sq-main-banner200180920 .main-banner__video {
+            height: 702px;
+        }
+        
+        .sq-main-banner200180920.iframe-ready .main-banner__video-wrapper {
+            visibility: visible;
+        }
+
+        .sq-main-banner200180920 .main-banner__item:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: 1;
+            transition: opacity .4s ease;
+        }
+        
+        .sq-main-banner200180920.iframe-ready .main-banner__item:after {
+            opacity: 0;
+        }
+
+        .sq-main-banner200180920.iframe-ready:hover .main-banner__item:after {
+            opacity: .2;
+        }
+    </style>
+    <div class="main-banner__video-wrapper">
+        <iframe
+            class="main-banner__video"
+            name="sq-main-banner200180920__video"
+            id="sq-main-banner200180920__video"
+            frameborder="0"
+            allow="autoplay"
+            data-videoid="MbHlioYJEis"></iframe>
+    </div>
+    <a  class="main-banner__item"
+        href="/bs-click/740259?hit_id=1636590580391242790&slot_name=w_main_2&aim=/c/4153/default-women/%3Flabels%3D30779%26display_locations%3Dall">
+    </a>
+    <script type="text/javascript">
+        var $video = document.getElementById('sq-main-banner200180920__video');
+        var videoId = $video.getAttribute('data-videoid');
+        var videoOptions = {
+            'autoplay':       '1',
+            'loop':           '1',
+            'enablejsapi':    '1',
+            'playerapiid':    'featuredytplayer',
+            'controls':       '0',
+            'modestbranding': '1',
+            'rel':            '0',
+            'showinfo':       '0',
+            'color':          'white',
+            'iv_load_policy': '3',
+            'theme':          'light',
+            'wmode':          'transparent',
+            'origin':         window.location.origin,
+            'mute':           1,
+            'playlist':       videoId
+        };
+        var params = [];
+        var playCommand = JSON.stringify( { event: 'command', func: 'playVideo' } );
+        for (var key in videoOptions) {
+            params.push(key + '=' + videoOptions[key]);
+        }
+        var src = '//www.youtube.com/embed/' + videoId + '?' + params.join('&');
+        
+        var frameReady = function() {
+            $video.parentNode.parentNode.className += ' iframe-ready';
+        }
+        
+        $video.onload = setTimeout(frameReady, 5000);
+        $video.setAttribute('src', src);
+    </script>
+</div>

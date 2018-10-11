@@ -1,0 +1,129 @@
+<style type="text/css">
+    .footer__sticky-items {
+        width: 36%;
+    }
+    .footer__sticky-right {
+        overflow: visible;
+    }
+    .footer__sticky-right .footer__sticky-item {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .footer__sticky {
+        background-color: #000;
+    }
+    .footer__sticky .footer__link,
+    .footer__sticky .ii-footer__link {
+        color: #fff;
+    }
+    .footer__sticky-item .footer__garage-sale-link {
+        display: inline-block;
+        height: 100%;
+        padding: 0;
+        width: 100%;
+    }
+    .footer__garage-sale-text {
+        font: 14px/50px "ProximaNova Light", "Helvetica Neue",Arial,sans-serif;
+        vertical-align: top;
+        letter-spacing: .02em;
+    }
+    .footer__garage-sale-boldtext {
+        font: 14px/50px "ProximaNova Semibold", "Helvetica Neue",Arial,sans-serif;
+        color: #ffe13d;
+    }
+    .footer__garage-sale-img {
+        margin: -8px 0 0 23px;
+        vertical-align: top;
+    }
+    .footer__garage-sale-button {
+        display: inline-block;
+        margin-left: 40px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #888;
+        letter-spacing: .08em;
+        font-weight: 100;
+        width: 148px;
+        line-height: 28px;
+        -moz-transition: .5s all ease;
+        -webkit-transition: .5s all ease;
+        transition: .5s all ease;
+    }
+    .footer__garage-sale-button:hover {
+        background: #fff;
+        color: #000;
+    }
+    .footer__garage-sale-counter {
+        margin: 0 0 0 4px;
+        display: inline-block;
+        text-align: center;
+    }
+    .footer__garage-sale-counter-num {
+        display: inline-block;
+        width: 35px;
+        padding: 0 4px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+</style>
+<div class="footer__sticky-item">
+    <a class="footer__link footer__garage-sale-link" href="/sale">
+        <span class="footer__garage-sale-text">До начала <b class="footer__garage-sale-boldtext">GARAGE SALE</b> осталось:<span class="footer__garage-sale-counter js-footer-counter"
+        data-local-time="<!--# config timefmt="%s" --><!--# echo var="date_local" -->"
+        data-target-time="2017-07-25T23:59">
+            <span class="footer__garage-sale-counter-num js-footer-counter-days"></span>
+            <span class="footer__garage-sale-counter-num js-footer-counter-hours"></span>
+            <span class="footer__garage-sale-counter-num js-footer-counter-minutes"></span></span></span>
+        <img class="footer__garage-sale-img" src="data:image/png;base64,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">
+        <span class="footer__garage-sale-button" href="#">Смотреть</span>
+    </a>
+</div>
+<script type="text/javascript">
+(function(d){
+    var
+        _timer,
+        targetTime = d.querySelector('.js-footer-counter').getAttribute('data-target-time'),
+        timeOffset = (new Date()).getTime() - d.querySelector('.js-footer-counter').getAttribute('data-local-time') * 1e3,
+        $days = d.querySelector('.js-footer-counter .js-footer-counter-days'),
+        $hours = d.querySelector('.js-footer-counter .js-footer-counter-hours'),
+        $minutes = d.querySelector('.js-footer-counter .js-footer-counter-minutes');
+
+    function getTimeRemaining(endTime) {
+        var t = Date.parse(endTime) - Date.parse(new Date()) - timeOffset;
+        if (t >= 0) {
+            return {
+                'days'   : Math.floor( t/(1000*60*60*24) ),
+                'hours'  : Math.floor( (t/(1000*60*60)) % 24 ),
+                'minutes': Math.floor( (t/1000/60) % 60 ),
+                'seconds': Math.floor( (t/1000) % 60 )
+            }
+        } else return false;
+    }
+
+    function fmtNum(num) {
+        return num > 9 ? '' + num : '0' + num;
+    }
+
+    function updateTimer() {
+        var dt = getTimeRemaining(targetTime);
+        if ( dt ) {
+            if (dt.days > 0) {
+                $days.innerText = fmtNum(dt.days) + 'д';
+                $hours.innerText = fmtNum(dt.hours) + 'ч';
+                $minutes.innerText = fmtNum(dt.minutes) + 'м';
+            } else {
+                $days.innerText = fmtNum(dt.hours) + 'ч';
+                $hours.innerText = fmtNum(dt.minutes) + 'м';
+                $minutes.innerText = fmtNum(dt.seconds) + 'с';
+            }
+        } else {
+            _timer && clearTimeout(_timer);
+        }
+    }
+
+    _timer = setInterval(updateTimer, 1000);
+})(document);
+</script>

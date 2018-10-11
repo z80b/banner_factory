@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Payture.com - Merchant</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="ROBOTS" content="ALL" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="/Lamoda/mobile/css/style.css" />
+</head>
+<body>
+
+    <div class="payture payture-block" id="payture">
+        <div class="payture-title payture-title_error"><div id="payture-title-error">{error}</div></div>
+        <div class="payture-info payture-block">
+            <h3 class="payture-info__title">Оплата заказа №{orderid}</h3>
+            <div class="payture-info__description">Введите данные банковской карты VISA,  VISA Electron, MasterCard или Maestro</div>
+            <div class="payture-amount">
+                <div class="payture-amount__title">К оплате:</div>
+                <div class="payture-amount__value">{total} руб.</div>
+            </div>
+        </div>
+        <div class="payture-card">
+            <div class="field_block payture-block">
+                <div class="field_label">Номер карты</div>
+                <input autocomplete="off" id="card_num" class="text_input" type="tel" tabindex="1" placeholder="----     ----     ----     ----" />
+                <div class="field_description">Шестнадцатизначное число на лицевой стороне карты</div>
+            </div>
+            <div class="field_block payture-block">
+                <div class="field_label">Срок действия</div>
+                <div class="field_right_column">
+                    <div class="field_box">
+                        <input id="card_valid_month" class="text_input" type="tel" maxlength="2" placeholder="--"/>
+                        <div class="field_description">Месяц</div>
+                    </div>
+                    <div id="bigtext">/</div>
+                    <div class="field_box">
+                        <input id="card_valid_year" class="text_input" type="tel" maxlength="2" placeholder="--"/>
+                        <div class="field_description">Год</div>
+                    </div>
+                </div>
+            </div>
+            <div class="field_block field_block_line payture-block">
+                <div class="field_label">CVV/CVC</div>
+                <div class="field_right_column cvc_column">
+                    <input id="cvc_input" class="text_input" type="tel" maxlength="3" placeholder="&bull;&bull;&bull;"/>
+                </div>
+                <div class="field_description">Последние три цифры на полосе для подписи</div>
+            </div>
+        </div>
+        <div class="payture-block">
+            <b class="in_disabled" id="payture-btn">
+                <span id="b-loader"></span>
+                <span class="b-btn__label">Оплатить</span>
+            </b>
+            <a id="payture-cantsubmit" class="in_disabled" href="/paymentassist/response/success/iframe/">Не получается оплатить</a>
+            <div class="payture-description">Все операции с банковскими картами проводятся в соответствии с требованиями VISA International и MasterCard Worldwide. Безопасность платежей гарантируется использованием протокола SSL для передачи конфиденциальной информации.</div>
+        </div>
+    </div>
+
+    <input type="hidden" name="Key" value="{key}" id="key"/>
+    <input type="hidden" name="OrderId" value="{orderId}" id="order_id"/>
+    <input type="hidden" name="Amount" value="{amount}" id="amount"/>
+
+
+    <script src="/Lamoda/mobile/js/jquery.js"></script>
+    <script src="/Lamoda/mobile/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+$imageBlock
+    display block
+    
+    &::after
+        content ''
+        display table
+        clear both
+        
+    &__preview, &__bigimage
+        display block
+        width 100%
+        
+    &__preview
+        padding 2px
+        box-sizing border-box
+        
+    &__slider
+        position relative
+        width 100%
+        
+        &-inner
+            overflow hidden
+        
+        &-button
+            absolute top 0 width 27px height 100%
+            background 50% 50% no-repeat
+            background-size contein
+            padding 0
+            border none
+            outline none
+            cursor pointer
+            transition .5s all ease
+            
+            &--prev
+                background-image url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#333'/></svg>")
+                left 0
+                &:hover
+                    transform translate(-2px,0)
+            &--next
+                background-image url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#333'/></svg>")
+                right 0
+                &:hover
+                    transform translate(2px,0)
+                
+            &:hover
+                opacity .8
+    
+    &__slide
+        position relative
+        display block
+        box-sizing border-box
+        float left
+        width 25%
+        padding 0 2px
+        outline none
+        overflow hidden
+        
+        &::after
+            content ''
+            absolute top 0 left 0 width 100% height 100%
+            background-color rgba(#000, .3)
+            opacity 0
+            transition .5s all ease
+            
+        &:hover::after
+            opacity .3
+            
+        
+        &-image
+            display block
+            width 100%
+            transform scale(1)
+            transition .5s transform ease
+            
+            ~/__slide:hover &
+                transform scale(1.1)
+            
+        

@@ -1,0 +1,22 @@
+﻿<style>
+    .ip-banner {
+        max-height: 350px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .ip-banner__image_wide {
+        display: none;
+    }
+    .widescreen .ip-banner__image_narrow {
+        display: none;
+    }
+    .widescreen .ip-banner__image_wide {
+        display: inline-block;
+    }
+</style>
+<div class="ip-banner">
+    <img class="ip-banner__image ip-banner__image_narrow" src="{{ files['small.jpg'] | default('small.jpg') }}">
+    <img class="ip-banner__image ip-banner__image_wide" src="{{ files['big.jpg'] | default('big.jpg') }}">
+{#     <img class="ip-banner__image ip-banner__image_narrow" src="/bs-hit/seller_ip_marketplace/ip_test_960_2.jpg"/>
+    <img class="ip-banner__image ip-banner__image_wide" src="/bs-hit/seller_ip_marketplace/ip_test_1206_2.jpg"/> #}
+</div>

@@ -1,0 +1,24 @@
+$closeButton
+    width 30px
+    height 30px
+    background-color #fff
+    border-radius 100%
+    box-shadow 0 2px 2px 0 rgba(0,0,0,.2)
+    cursor pointer
+    position absolute
+    right -10px
+    top -10px
+    z-index 2
+    
+    &::before, &::after
+        background-color #414141
+        content ''
+        position absolute
+        left 14px
+        height 14px
+        top 8px
+        width 2px
+    &::before
+        transform rotate(45deg)
+    &::after
+        transform rotate(-45deg)
