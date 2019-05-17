@@ -1,0 +1,62 @@
+$banner
+    display inline-block
+    overflow hidden
+    box-sizing border-box
+    
+    &__content
+        display block
+        position relative
+
+        &::before
+            content ''
+            display block
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            background-color rgba(#000, 0)
+            transition .5s all ease
+            
+        &:hover::before
+            background-color rgba(#000, .3)
+                
+        ../--video &
+            &::before
+                display block
+                margin -74px 0 0 -74px
+                width 117px
+                height 117px
+                background inline-image('../imgs/video-button.png') 50% 50% no-repeat
+                background-color inherit
+                left 50%
+                top 50%
+                opacity 1
+
+            &:hover::before
+                background-color inherit
+                opacity .3
+                
+        ../--play &
+            &::before
+                content none !important
+            
+                    
+    &__image
+        display block
+        
+    &__videoframe
+        background-color #000
+        
+    &__title
+        display block
+        font-size 24px
+        line-height 1
+        font-weight 300
+        text-align center
+        color #888
+        margin 0
+        transition color .5s ease
+        
+        ../:hover &
+            color #333

@@ -1,0 +1,27 @@
+<div class="lp-page__header lp-header">
+    <div class="lp-header__image lp-header__image--desktop" style="background-image: url('/bs-hit/ny18_header/header-bg.jpg')"></div>
+    <img class="lp-header__image lp-header__image--mobile" src="/bs-hit/ny18_header/header-mobile.jpg"/>
+    <div class="lp-header__inner lp-page__subscribe">
+        <h2 class="lp-header__description">Узнайте первыми о лучших предложениях зимней распродажи</h2>
+        <div class="lp-subscription js-subscription-form">
+            <form
+                action="/subscribe/newsletter/"
+                class="lp-subscription__form js-subscribe-form subscription__form">
+                <input type="hidden" name="location" value="subscr_header"/>
+                <input type="hidden" name="source" value="landing_wintersale"/>
+                <input type="hidden" name="is_from_partner" value="false"/>
+                <input type="hidden" name="subscription_type" value="DEFAULT,WOMEN_TRENDS,WOMEN_PREMIUM_BRANDS,WOMEN_SPORT,WOMEN_BEAUTY"/>
+                <div data-form-widget="email" class="lp-subscription__element lp-subscription__element--email">
+                    <input class="lp-subscription__email" type="text" name="email" data-form-control="email" value="" maxlength="50" placeholder="Введите e-mail ..." autocomplete="off"  data-type="email"/>
+                </div>
+                <div data-form-widget="gender" class="lp-subscription__buttons">
+                    <input type="hidden" name="gender" value="F" data-form-control="gender" data-type="text"/>
+                    <button class="lp-subscription__submit lp-subscription__submit--women" type="submit" name="gender" value="F" data-gender="F"></button>
+                    <button class="lp-subscription__submit lp-subscription__submit--men" type="submit" name="gender" value="M" data-gender="M"></button>
+                </div>
+            </form>
+        </div>
+        <div data-form-error="email" class="lp-header__caution js-header-form-error">Вводя e-mail, вы даете свое согласие на обработку персональных данных. Убедитесь, что у вас в настройках нет ограничений на новостную рассылку Lamoda.</div>
+        <div class="lp-header__note">* Зимняя распродажа</div>
+    </div>
+</div>

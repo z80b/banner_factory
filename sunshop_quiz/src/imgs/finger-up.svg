@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="186.5 44.5 24 22" width="22" height="20.146" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+	.st0{fill:#232323;}
+	.st1{fill:none;stroke:#111111;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFCA3B;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#FFCA3B;stroke-width:0.65;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#FFCA3B;stroke-width:0.65;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{fill:#FCC029;}
+	.st7{fill:none;stroke:#FFFFFF;stroke-width:0.65;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:#FFFFFF;}
+</style>
+  </defs>
+  <g>
+    <path class="st1" d="M206,59.5L206,59.5c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5h-1c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5 c0,0-4,0-6.5,0c-4,0-3-2-11-2c0-0.5,0-9,0-9h3c3.5,0,7.5-3.2,7.5-8c0-1.6,3-1.8,3,1.2c0,2-1,5.8-1,5.8h8c0.8,0,1.5,0.7,1.5,1.5 s-0.7,1.5-1.5,1.5h-1c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5H206"/>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+$slider
+    &-slider 
+        position relative
+        display block
+        user-select none
+        touch-callout none
+        touch-action pan-y
+        tap-highlight-color transparent
+        
+    &-track
+        position relative
+        top 0
+        left 0
+        display block
+        
+        &:after
+            clear both
+            display table
+            content ''
+
+    &-slide
+        display none
+        float left
+        
+        &, &:focus
+            outline none
+            
+    &-dots
+        display block
+        position absolute
+        bottom 0
+        width 100%
+        text-align center
+        padding 0
+        margin 0
+        line-height 0
+        white-space nowrap
+        
+        li
+            display inline-block
+            margin 0 18px
+            
+            button
+                display block
+                width 10px
+                height 10px
+                overflow hidden
+                background #cfd3d7
+                border none
+                border-radius 50%
+                color transparent
+                padding 0
+                cursor pointer
+                outline none
+                
+            &.slick-active
+                button
+                    background #222

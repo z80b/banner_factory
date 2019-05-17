@@ -1,0 +1,11 @@
+<div class="lp-game__slide-body">
+    <% for (var sku in products) { %>
+    <span  class="lp-game__slide-part" data-sku="<%= sku %>"
+        style="background-image: url('//a.lmcdn.ru/pi/img389x562/<%= products[sku].images[0] %>')">
+        <span class="lp-game__slide-result">
+            <span class="lp-game__slide-result-title">Правильный ответ!</span>
+            <span class="lp-game__slide-result-text js-quiz-result-text"></span>
+        </span>
+    </span>
+    <% } %>
+</div>

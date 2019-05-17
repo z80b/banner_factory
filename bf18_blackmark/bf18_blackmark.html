@@ -1,0 +1,41 @@
+<div class="lp-awards__tabs-content-wrapper">
+    <input class="lp-awards__tabs-switcher" name="tab-switcher" type="radio" id="tab-1"/>
+    <div class="lp-awards__tabs-content lp-tabs-content lp-awards__tabs-content--blacklabel">
+        <div class="lp-awards__blacklabel lp-blacklabel">
+            <div class="lp-blacklabel__step lp-blacklabel__step--1">
+                <div class="lp-blacklabel__step-number">1</div>
+                <div class="lp-blacklabel__step-text">Найдите в каталоге товар<br/>с чёрной меткой</div>
+                <img class="lp-blacklabel__step-image" src="/bs-hit/bf18_blackmark/image-01.png"/>
+            </div>
+            <div class="lp-blacklabel__step lp-blacklabel__step--2">
+                <div class="lp-blacklabel__step-number">2</div>
+                <div class="lp-blacklabel__step-text">Найдите в каталоге товар<br/>с чёрной меткой</div>
+                <img class="lp-blacklabel__step-image" src="/bs-hit/bf18_blackmark/image-02.png"/>
+            </div>
+            <div class="lp-blacklabel__step lp-blacklabel__step--3" data-mode="cupon">
+                <div class="lp-blacklabel__step-number">3</div>
+                <div class="lp-blacklabel__step-texts">
+                    <div class="lp-blacklabel__step-text js-blackmark-start-text" data-mode="cupon">Введите артикул в форме ниже и получите экслюзивную скидку на ваш email.<br/>За каждую черную метку вы получите промокод со скидкой до 40%, которая<br/>суммируется с вашей скидкой по программе лояльности Lamoda Friends&Family.</div>
+                    <div class="lp-blacklabel__step-text js-blackmark-sku-text" data-mode="request">Ура! Для получения скидки на данный товар<br/>введите Ваш e-mail ниже:</div>
+                    <div class="lp-blacklabel__step-text js-blackmark-email-text" data-mode="success">Поздравляем! Ваша скидка составляет 15%.<br/>На ваш e-mail придет письмо со скидкой.</div>
+                </div>
+                <form class="lp-blacklabel__form lp-blacklabel__form--cupon js-blackmark-checkaction" action="/blackfriday/checkaction/">
+                    <input type="hidden" name="action_id" value="30872"/>
+                    <input class="lp-blacklabel__form-input" type="text" name="sku" placeholder="Введите артикул ..." autocomplete="off" />
+                    <button class="lp-blacklabel__form-submit" type="submit">OK</button>
+                    <div class="lp-blacklabel__form-error"></div>
+                </form>
+                <form class="lp-blacklabel__form lp-blacklabel__form--request js-blackmark-sendpersonalcoupon" action="/blackfriday/blacklabel/sendcoupon/">
+                    <input class="lp-blacklabel__form-input" type="text" name="email" placeholder="Введите ваш e-mail ..." autocomplete="off" />
+                    <button class="lp-blacklabel__form-submit lp-blacklabel__form-submit--men" type="submit"></button>
+                    <button class="lp-blacklabel__form-submit lp-blacklabel__form-submit--women" type="submit"></button>
+                    <div class="lp-blacklabel__form-error"></div>
+                </form>
+            </div>
+        </div>
+        <div class="lp-blacklabel__description">На все акции в ноябре действует один промокод. При любой сумме заказа. Ассортимент товаров, участвующих в акции, может<br/>измениться. Дополнительная скидка по программе лояльности Lamoda Friends&Family не применяется совместно с<br/>промокодом данной акции. По 19 сентября 2018 года включительно.</div>
+        <div class="lp-blacklabel__actions">
+            <a class="lp-blacklabel__actions-button" href="/">Перейти к покупкам</a>
+        </div>
+    </div>
+</div>

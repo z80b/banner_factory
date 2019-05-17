@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="13.5 16.5 23 20" width="23" height="20" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+	.st0{fill:#232323;}
+	.st1{fill:none;stroke:#111111;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFCA3B;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#FFCA3B;stroke-width:0.65;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#FFCA3B;stroke-width:0.65;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{fill:#FCC029;}
+	.st7{fill:none;stroke:#FFFFFF;stroke-width:0.65;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:#FFFFFF;}
+</style>
+  </defs>
+  <g>
+    <circle class="st3" cx="32" cy="35" r="1.5"/>
+    <circle class="st3" cx="21" cy="35" r="1.5"/>
+    <polyline class="st3" points="13.5,16.5 17,16.5 21,33.5 32,33.5 &#9;"/>
+    <polyline class="st3" points="20.5,31.5 33.5,31.5 36.5,22.5 18.4,22.5 &#9;"/>
+  </g>
+</svg>

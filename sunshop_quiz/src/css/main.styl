@@ -1,0 +1,409 @@
+@import 'components/*.styl'
+@import 'promo-form.styl'
+
+.lp-awards
+    &__tabs
+        text-align center
+        padding 55px 0 0
+        font-size 0
+        
+        &-switcher
+            display none
+            
+        &-contents
+            position relative
+        
+        &-content
+            box-sizing border-box
+            padding 58px 30px
+            transition .5s opacity ease
+            
+            ../-switcher:checked + &
+                position relative
+                height auto
+                opacity 1
+                overflow inherit
+            
+            &::after
+                content ''
+                display block
+                absolute top -19px width 35px height 35px
+                background-color inherit
+                border inherit
+                border-width 1px 1px 0 0                
+                transform rotateZ(-45deg)
+                margin 0 0 0 -17px
+                
+                .lp-page__bonus&
+                    [data-contents-count="3"] &
+                        left 16.5%
+                        
+                    [data-contents-count="1"] &
+                        left 50%
+                
+                ../--blacklabel&
+                    [data-contents-count="3"] &
+                        left 50%
+                    
+                ../--game&
+                    [data-contents-count="3"] &
+                        left 83.5%
+            
+    &__title
+        @extends $block-title
+        font-size 42px
+        padding 108px 0 60px
+        
+    &-tab
+        display inline-block
+        width 33%
+        border-left solid 1px #2f2f2f
+        vertical-align top
+        padding 0 0 55px
+        
+        &:first-child
+            border-left none
+            
+        &__title
+            @extends $block-title
+            font-size 24px
+            padding 42px 0 18px
+            
+        &__body
+            min-height 208px
+            position relative
+            padding 0 0 40px
+            
+        &__text
+            font 16px/1.6 'ProximaNova Regular', Open, sans-serif
+            color #a7a7a7
+            padding 0 40px
+            
+        &__link
+            absolute left 0 bottom 0 width 100%
+            font 14px/1.4 'ProximaNova Regular', Open, sans-serif
+            color #fff
+            text-decoration underline solid #404040
+            cursor pointer
+            transition .5s all ease
+            
+            &:hover
+                color darken(#fff, 20%)
+            
+        &__image
+            size 210px 210px
+            margin 0 auto
+            background 50% 50% no-repeat
+            background-size auto
+            
+    &__actions
+        width 100%
+        font-size 0
+        text-align center
+        
+        &-button
+            @extends $button
+        
+        &-description
+            font 13px/1.6 'ProximaNova Regular', Open, sans-serif
+            color #777
+            text-align center
+            
+        &-block
+            padding 65px 0 45px
+        
+    &__action
+        display inline-block
+        width 33%
+        text-align center
+        vertical-align top
+        
+        &-percent
+            font 96px/1 'ProximaNovaExCn Light', Open, sans-serif
+            color #fff
+            padding 26px 0 18px
+            
+        &-description
+            font 16px/1.6 'ProximaNova Regular', Open, sans-serif
+            color #a7a7a7
+            text-align center
+            min-height 100px
+            padding 0 2.5em
+            
+.lp-game
+    .element-hidden
+        display none
+        
+    &__title
+        font 32px/1.5 'ProximaNova Regular'
+        text-align center
+        color #222
+        margin 0
+        display none
+        
+        &-wrapper
+            padding 5px 0 65px
+            height 96px
+        
+        for step in 0 1 2
+            &--{step}
+                [data-step={'"'+step+'"'}] &
+                    display block
+        
+    &__slider
+        @extends $clear-block
+        position relative
+        size 896px 535px
+        margin 0 auto
+        padding 0 0 40px
+        overflow hidden
+        
+        .widescreen &
+            width 1050px
+        
+        &-track
+            @extends $clear-block
+            width 1050px * 4
+            transition .5s transform ease
+            for step in 0 1 2 3
+                [data-step={'"'+step+'"'}] &
+                    transform translateX(-896px * step)
+                    
+                    .widescreen &
+                        transform translateX(-1050px * step)
+                    
+        &-dots
+            @extends $clear-block
+            absolute bottom 0 left 0 width 100%
+            font-size 0
+            line-height 0
+            text-align center
+            
+        &-dot
+            size 12px 12px
+            display inline-block
+            background-color #888
+            border-radius 50%
+            margin 0 6px
+            
+            for step in 0 1 2 3
+                &--{step}
+                    [data-step={'"'+step+'"'}] &
+                        background-color #222
+                        
+        &-button
+            absolute top 0 height 100% width 24px
+            background 50% 50% no-repeat
+            border none
+            outline none
+            display block
+            cursor pointer
+            transition .5s all ease
+            
+            &:hover
+                opacity .8
+            
+            &--next
+                background-image inline-image('../imgs/slider-next-arrow.png')
+                right 40px
+                
+                [data-step="3"] &
+                    display none
+                
+                &:hover
+                    right 38px
+                
+            &--prev
+                background-image inline-image('../imgs/slider-prev-arrow.png')
+                left 40px
+                
+                [data-step="0"] &
+                    display none
+                    
+                
+                &::after
+                    [data-step="3"] &
+                        content "Посмотреть ответы"
+                        font 14px/18px 'ProximaNova Regular'
+                        margin -18px 0 0
+                        display block
+                        absolute top 50% left 50px
+                        color #888
+                        text-align left
+                        
+                &:hover
+                    left 38px
+        
+    &__slide
+        float left
+        size auto 100%
+        
+        &-body
+            @extends $clear-block
+            
+        &-result
+            absolute bottom 30px left 70px right 70px
+            background-color #fff
+            box-shadow 1px 1px 3px 0 #0000001f
+            padding 30px
+            font 14px/18px 'ProximaNova Regular'
+            opacity 0
+            transition .5s opacity ease 1s
+            
+            .lp-game__slide-part--success &
+                opacity 1
+                
+            &-title, &-text
+                display block
+        
+        &-part
+            position relative
+            display block
+            size 444px 535px
+            background #f8f8f8 50% 50% no-repeat
+            background-size auto 100%
+            margin 0 2px
+            float left
+            cursor pointer
+            perspective 1000px
+            
+            .widescreen &
+                width 521px
+            
+            &::before, &::after
+                content ''
+                display block
+                opacity 0
+                transition .5s all ease
+            
+            &::before
+                absolute top 50% left 50% width 148px height 148px
+                margin -64px 0 0 -64px
+                background #000000b3 url('https://a.lmcdn.ru/files/cms/palec_beliy.svg') 50% 50% no-repeat
+                background-size auto 75px
+                border-radius 50%
+                transform rotateY(90deg)
+            
+            &::after
+                box-sizing border-box
+                absolute top 0 left 0 width 100% height 100%
+                border solid 4px #222
+                box-shadow inset 0 0 10px 0px rgba(#000, 0.3)
+                
+            &:hover::after
+                opacity 1
+                
+            &:hover::before
+                .lp-game-begining &
+                    opacity 1
+                    transform rotateY(0)
+            
+        &-image
+            display block
+            width 100%
+            
+    &__result
+        background-color #fff
+        border solid 4px #222
+        box-sizing border-box
+        size 896px 535px
+        padding 105px 0 0
+        
+        .widescreen &
+            width 1050px
+        
+        &-icon
+            display block
+            size 100px 92px
+            background 50% 50% no-repeat
+            background-size cover
+            margin 0 auto
+            
+            ~/__result--success &
+                background-image url('https://a.lmcdn.ru/files/cms/finger-up.svg')
+                
+            ~/__result--fail &
+                background-image url('https://a.lmcdn.ru/files/cms/finger-down.svg')
+                
+        &-text
+            font 22px/32px 'ProximaNova Regular'
+            color #111
+            padding 25px 0
+            
+            span
+                white-space pre-line
+        
+        &-text, &-content
+            display none
+            text-align center
+            
+            &--success
+                .lp-game__result--success &
+                    display block
+                    
+            &--fail
+                .lp-game__result--fail &
+                    display block
+                    
+        &-dots
+            margin -6px 0 30px
+            font-size 0
+            
+        &-dot
+            display inline-block
+            size 15px 15px
+            background-color #e84d26
+            border-radius 50% 50%
+            margin 0 8px
+            
+            &--success
+                background-color #98c989
+                
+        &-button
+            display inline-block
+            font 13px/48px 'ProximaNova Regular'
+            text-align center
+            width 200px
+            border solid 1px #888
+            color #111
+            cursor pointer
+            transition .5s all ease
+            
+            &:hover
+                background-color lighten(#eee, 10%)
+        
+    &__actions
+        display block
+        text-align center
+        
+        &-button
+            @extends $button
+            display inline-block
+            margin 25px auto
+            
+    &__description
+        font 13px/1.6 'ProximaNova Regular'
+        color #777
+        margin 45px auto
+        padding 30px 0 0
+        
+        
+.lp-promo-form
+    &__email
+        .field-error &
+            border-color red !important
+        
+    &__form-error
+        padding 10px 0 0
+        color #111
+        
+    &__footer
+        display block
+        clear both
+        text-align center
+        padding 50px 0 0
+        
+        &-link
+            display none
+            font 14px/1 'ProximaNova Regular'
+            text-decoration underline

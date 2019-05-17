@@ -1,0 +1,44 @@
+<h2 class="lp-snowflake__title">Найдите снежинку и получи скидку до 40%</h2>
+<div class="lp-snowflake__subject">Найдите снежинку в карточке товара и получите эксклюзивную скидку на ваш e-mail.
+За каждую найденную снежинку вы получите дополнительно до 40% на подборку товаров.</div>
+<div class="lp-snowflake__wrapper">
+    <div class="lp-snowflake">
+        <div class="lp-snowflake__steps">
+            <div class="lp-snowflake__step lp-snowflake__step--1">
+                <div class="lp-snowflake__step-number">1</div>
+                <div class="lp-snowflake__step-text">Найдите в каталоге товар<br/>с чёрной меткой</div>
+                <img class="lp-snowflake__step-image" src="/bs-hit/ny18_snowflake/image-01.jpg"/>
+            </div>
+            <div class="lp-snowflake__step lp-snowflake__step--2">
+                <div class="lp-snowflake__step-number">2</div>
+                <div class="lp-snowflake__step-text">Найдите в каталоге товар<br/>с чёрной меткой</div>
+                <img class="lp-snowflake__step-image" src="/bs-hit/ny18_snowflake/image-02.jpg"/>
+            </div>
+            <div class="lp-snowflake__step lp-snowflake__step--3" data-mode="cupon">
+                <div class="lp-snowflake__step-number">3</div>
+                <div class="lp-snowflake__step-texts">
+                    <div class="lp-snowflake__step-text js-snowflake-start-text" data-mode="cupon">Введите артикул в форме ниже и получите экслюзивную скидку на ваш email.<br/>За каждую черную метку вы получите промокод со скидкой до 40%, которая<br/>суммируется с вашей скидкой по программе лояльности Lamoda Friends&Family.</div>
+                    <div class="lp-snowflake__step-text js-snowflake-sku-text" data-mode="request">Ура! Для получения скидки на данный товар<br/>введите Ваш e-mail ниже:</div>
+                    <div class="lp-snowflake__step-text js-snowflake-email-text" data-mode="success">Поздравляем! Ваша скидка составляет 15%.<br/>На ваш e-mail придет письмо со скидкой.</div>
+                </div>
+                <form class="lp-snowflake__form lp-snowflake__form--cupon js-snowflake-checkaction" action="/blackfriday/checkaction/">
+                    <input type="hidden" name="action_id" value="30872"/>
+                    <input class="lp-snowflake__form-input" type="text" name="sku" placeholder="Введите артикул ..." autocomplete="off" />
+                    <button class="lp-snowflake__form-submit" type="submit">OK</button>
+                    <div class="lp-snowflake__form-error"></div>
+                </form>
+                <form class="lp-snowflake__form lp-snowflake__form--request js-snowflake-sendpersonalcoupon" action="/blackfriday/blacklabel/sendcoupon/">
+                    <input class="lp-snowflake__form-input" type="text" name="email" placeholder="Введите ваш e-mail ..." autocomplete="off" />
+                    <button class="lp-snowflake__form-submit" type="submit">OK</button>
+                    <div class="lp-snowflake__form-error"></div>
+                </form>
+            </div>
+        </div>
+        <div class="lp-snowflake__footer">
+            <div class="lp-snowflake__description">Вводя e-mail, вы даете свое согласие на обработку персональных данных. Убедитесь, что у вас в настройках нет ограничений<br/>на новостную рассылку Lamoda. Промокод действует при любой сумме заказа, является уникальным и может быть применен<br/>только один раз. Ассортимент товаров, участвующих в акции, может измениться. Размер скидки будет доступен в «Корзине»<br/>после применения промокода акции. Дополнительная скидка по программе лояльности Lamoda Friends&Family не<br/>применяется совместно с промокодом данной акции.</div>
+            <div class="lp-snowflake__actions">
+                <a class="lp-snowflake__actions-button" href="/">Перейти к покупкам</a>
+            </div>
+        </div>
+    </div>
+</div>

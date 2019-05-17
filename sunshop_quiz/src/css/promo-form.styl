@@ -1,0 +1,73 @@
+.lp-promo-form
+    @extends $clear-block
+    display inline-block
+    white-space nowrap
+    margin 10px 0
+    
+    &__form-error
+        absolute top 100% left 0
+        padding 5px 0 0
+        white-space nowrap
+        color #a7a7a7
+        
+    &__element
+        position relative
+        display block
+        float left
+        
+    &__email
+        display inline-block
+        font 14px/1.8 'ProximaNova Regular'
+        color #111
+        box-sizing border-box
+        background-color #e84d26
+        border solid 1px #222
+        size 300px 60px
+        padding 0 1.5em
+        outline none
+        transition .5s all ease
+        
+        ~/__form--focused &
+            border-color #e84d26
+        
+        .widget_invalid &
+            border-color #de023b
+        
+        &::placeholder
+            font-size 1em
+            color #111
+    &__buttons
+        font-size 0
+        float left
+        margin 0 0 0 20px
+          
+    &__submit
+        display inline-block
+        size 110px 60px
+        border solid 1px #888
+        outline none
+        cursor pointer
+        transition .5s all ease
+        
+        &:last-child
+            border-left none
+        
+        &--men
+            border-left none
+            
+            &::after
+                content 'Мужчинам'
+
+        &--women
+            &::after
+                content 'Женщинам'
+        
+        &:hover
+            background-color lighten(#eee, 10%)
+            
+        ~/__form--focused &
+            border-color #222
+            
+    &__element.widget_invalid ~ .lp-subscription__buttons
+        .lp-subscription__submit
+            border-color #de023b
